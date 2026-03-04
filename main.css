@@ -936,8 +936,8 @@
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
 
-.lightbox-prev::after  { content: '←'; }
-.lightbox-next::after  { content: '→'; }
+
+
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
@@ -982,9 +982,12 @@
     /* ── HERO ── */
     .cs-hero {
       background-color: #4e5d4b;
-      padding: 60px 60px 50px;
+      padding: 60px 60px;
       position: relative;
       overflow: hidden;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
     }
 
     /* subtle radial glow */
@@ -1002,10 +1005,11 @@
     .cs-hero-inner {
       display: grid;
       grid-template-columns: 1fr auto;
-      align-items: end;
+      align-items: center;
       gap: 48px;
       position: relative;
       z-index: 1;
+      width: 100%;
     }
 
     .cs-hero-left {
@@ -1029,6 +1033,12 @@
     }
     .cs-hero-back:hover { color: #f7f4ea; }
 
+    .cs-hero h2 {
+      position: static;
+      top: unset;
+      left: unset;
+    }
+
     .cs-hero-eyebrow {
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 0.72rem;
@@ -1046,6 +1056,11 @@
       color: #cadbcf;
       margin: 0 0 18px;
       line-height: 1.05;
+      /* Override base header h1 absolute positioning */
+      position: static;
+      top: unset;
+      left: unset;
+      padding-bottom: 0;
     }
 
     .cs-hero-desc {
@@ -1547,3 +1562,52 @@
 #card-cover-poster .card-img {
   object-position: top center;
 }
+
+    /* ── PROCESS PHOTO STAGES (woobee.html) ── */
+    .cs-stage {
+      margin-top: 32px;
+    }
+
+    .cs-stage-title {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #4e5d4b;
+      margin: 0 0 14px;
+    }
+
+    .cs-photo-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .cs-photo-placeholder {
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #afc5b2 0%, #798b79 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(247,244,234,0.6);
+      letter-spacing: 0.08em;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+    }
+
+    .cs-photo-row img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .cs-photo-row { grid-template-columns: 1fr; }
+    }
