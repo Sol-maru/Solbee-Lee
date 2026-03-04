@@ -936,8 +936,8 @@
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
 
-.lightbox-prev::after  { content: '90'; }
-.lightbox-next::after  { content: '92'; }
+.lightbox-prev::after  { content: '←'; }
+.lightbox-next::after  { content: '→'; }
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
