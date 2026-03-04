@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moribee Studio | Shop</title>
+    <link rel="stylesheet" type="text/css" href="normalize_v8.0.1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Shop</h1>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Hobby/Shop</a>
+    <a href="project">Portfolio</a>
+    <a href="contact.html">Message</a>
+  </nav>
+  <div class="header-image-container">
+    <img src="IMG_/header-image.jpg" alt="Header Image">
+  </div>
+  <section class="shop-section">
+    <h2>NOTICE</h2>
+    <p>To ask questions about a product, please email us via the contact page
+    <br>Be aware that because theses are handmade products, the descriptions and colors may vary the photo.</p>
+  
+    <h3>Best sellers</h3>
+    <div class="product-list">
+      <div class="product">
+        <img src="IMG_/pouch.jpg" alt="Pouch">
+        <div class="info">
+          <h4>Pouch $12</h4>
+          <p>Pouches! <br> width: 5.5" height: 6" <br> *available in different colors*</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/grey-bunny.jpg" alt="Bunny">
+        <div class="info">
+          <h4>Bunny $4</h4>
+          <p>Bunnies! <br>width: 2.5" height: 2.5" <br> *available in different colors and sizes*</p>
+        </div>
+      </div>
+    </div>
+  
+    <h3>More Options</h3>
+    <div class="product-list">
+      <div class="product">
+        <img src="IMG_/dino.jpg" alt="Dino">
+        <div class="info">
+          <h4>Dino $7</h4>
+          <p>Cute purple Dino! <br> width: 2.5" height:4.5"</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/frog.jpg" alt="froggies">
+        <div class="info">
+          <h4>Frogs $4</h4>
+          <p>Froggies <br>width: 1.5" height: 1.5" <br>*available in different colors and sizes*</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/octopus.jpg" alt="octopuses">
+        <div class="info">
+          <h4>Octopuses $4</h4>
+          <p>Octopuses! <br>width: 1.5" height: 1" <br>*available in different colors and sizes*</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/hand-warmer.jpg" alt="hand warmer">
+        <div class="info">
+          <h4>Left hand warmer $8</h4>
+          <p>Left hand only! <br>width: 3.5" height: 6.5" </p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/square-pouch.jpg" alt="square pouch">
+        <div class="info">
+          <h4>Square pouch $10</h4>
+          <p>Sqaure pouch <br>width: 3.5" height: 3.5" <br>*available in different colors and sizes*</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/daily-pouch.jpg" alt="daily pouch">
+        <div class="info">
+          <h4>Daily pouch $10</h4>
+          <p>Sqaure pouch <br>width: 4" height: 6" <br>*available in different colors and sizes*</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="IMG_/rabbit.jpg" alt="rabbit">
+        <div class="info">
+          <h4>Rabbit pouch $14</h4>
+          <p>Sqaure pouch <br>width: 5.5"" height: 4.5"</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="custom-order">
+      <div class="text">
+        <h3>Custom orders</h3>
+        <p>Custom orders are available for items with **. <br> For other custom orders please contact the studio prior to order for its possibility and payment. Thank you!</p>
+   
+      </div>
+      <div class="image">
+        <img src="IMG_/BEE_3.jpeg" alt="Custom Product">
+      </div>
+    </div>
+  </section>
+  
+  <hr class="divider">
+
+<section class="order-form">
+  <h3>Place an Order</h3>
+  <p>Fill out the form below and we’ll get back to you by email. <br> Pay via zelle: sol16.rena@gmail.com</p>
+  
+  <form action="https://formsubmit.co/sol16.rena@gmail.com" method="post" enctype="text/plain" onsubmit="alert('Your order has been sent! Thank you for shopping from Moribee Studio 🐝')">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required placeholder="Moribee">
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required placeholder="email@domain.com">
+
+    <label for="location">Delivery Location</label>
+    <input type="text" id="location" name="location" required placeholder="e.g. San Jose, CA">
+
+    <label for="item">Choose Item</label>
+      <select id="item" name="item" required>
+        <option value="" disabled selected>Select a product</option>
+        <option value="Rabbit Pouch $14">Rabbit Pouch ($14)</option>
+        <option value="Pouch $12">Pouch ($12)</option>
+        <option value="Square Pouch $10">Square Pouch ($10)</option>
+        <option value="Daily Pouch $10">Daily pouch ($10)</option>
+        <option value="Dino $7">Dino ($7)</option>
+        <option value="Frogs $4">Frogs ($4)</option>
+        <option value="Octopuses $4">Octopuses ($4)</option>
+        <option value="Bunny $4">Bunnies ($4)</option>
+        <option value="Hand warmer $8">Hand warmer ($8)</option>
+      </select>
+
+    <label for="notes">Custom Notes</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Color, size, or any custom requests"></textarea>
+
+    <button type="submit">Send Order</button>
+  </form>
+</section>
+<footer style="text-align: center; padding: 2rem 1rem; font-size: 0.9rem; color: #5A4B41;">
+  <p>
+    &copy; 2025 <a href="https://sol-maru.github.io/Moribee-Studio/" target="_blank" style="color: #5A4B41; text-decoration: underline;">
+      WooBee Archieve
+    </a>. All rights reserved.
+  </p>
+</footer>
+</body>
+
+</html>
