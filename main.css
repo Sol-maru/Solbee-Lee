@@ -1542,3 +1542,8 @@
     font-size: 14px;
     font-family: 'Helvetica Neue', sans-serif;
   }
+
+/* ── Card-specific image positioning ── */
+#card-cover-poster .card-img {
+  object-position: top center;
+}
