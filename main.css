@@ -275,15 +275,10 @@
       align-items: flex-end !important;
       padding: 0 50px 30px !important;
       background-color: #afc5b2;
-    }
-
-    header.about-hero img {
-      position: absolute !important;
-      inset: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-      display: block !important;
+      background-image: url('PHOTOS/rainy.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     /* Override base header h1/h2 absolute positioning */
