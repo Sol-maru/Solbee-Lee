@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Solbee Lee — MuzTime Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="page-case page-muztime">
+
+  <!-- NAV -->
+  <nav class="nav-topleft" aria-label="Primary">
+    <a href="index.html">Projects</a>
+    <a href="study.html">Study with Me</a>
+    <a href="about.html">About me</a>
+    <a href="achive.html">Archive</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="archive-hero">
+    <div class="archive-hero-text">
+      <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
+      <p class="archive-hero-eyebrow">Case Study 02 · In Development · iOS Mobile</p>
+      <h1>MuzTime</h1>
+      <p class="archive-hero-desc">Train in rhythm — a workout interval timer that stays locked to Spotify playback. The timer pauses when the music pauses, volume ducks by interval, and the next track is chosen by where your heart rate is headed.</p>
+      <div class="archive-meta">
+        <span class="archive-pill"><strong>Role</strong> Product Designer · Developer</span>
+        <span class="archive-pill"><strong>Tools</strong> Figma · Spotify API · Python</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTAINER ── -->
+  <main class="archive-main">
+    <div class="archive-container">
+      <div class="archive-body">
+
+        <!-- COUNTDOWN DIAL HERO GRAPHIC -->
+        <div class="mz-dial-wrap" aria-hidden="true">
+          <div class="mz-dial">
+            <div class="mz-dial-inner">
+              <div class="mz-dial-num">00:45</div>
+              <div class="mz-dial-label">Work Interval</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 01 THE PROBLEM -->
+        <section class="archive-section">
+          <p class="archive-section-label">01 — The Problem</p>
+          <h2>Two Apps That Don't Talk</h2>
+          <p>Interval timers and music apps have never actually talked to each other — so the workout and the soundtrack fight instead of moving together.</p>
+          <div class="archive-two-col">
+            <div class="archive-card">
+              <h3>What's Broken Today</h3>
+              <p>Music keeps running through rest periods. Track intros get skipped mid-warm-up or, worse, don't. The two apps have no idea the other exists.</p>
+            </div>
+            <div class="archive-card">
+              <h3>What MuzTime Does Instead</h3>
+              <p>One integrated session — the timer and Spotify respond to each other automatically, with just enough manual control (ducking, playlist choice) to feel personal.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 CORE MECHANICS -->
+        <section class="archive-section">
+          <p class="archive-section-label">02 — Core Mechanics</p>
+          <h2>Three Systems in Lockstep</h2>
+          <p>Three systems keep the timer and the music in lockstep, without asking the user to babysit either one.</p>
+          <div class="archive-three-col">
+            <div class="archive-step">
+              <span class="archive-step-num">A</span>
+              <h3>Linked Pause</h3>
+              <p>The timer pauses the instant Spotify pauses, in both work and rest intervals — no separate controls mid-set.</p>
+            </div>
+            <div class="archive-step">
+              <span class="archive-step-num">B</span>
+              <h3>Intro Skip</h3>
+              <p>Spotify's Audio Analysis API detects quiet intros and skips them, so every round starts already on the beat.</p>
+            </div>
+            <div class="archive-step">
+              <span class="archive-step-num">C</span>
+              <h3>Energy Queue</h3>
+              <p>A two-tier AI queue sequences tracks from your own playlist by energy arc, with Spotify Recommendations as a labeled fallback.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 THE FLOW — 7 SCREENS -->
+        <section class="archive-section">
+          <p class="archive-section-label">03 — The Flow, 7 Screens</p>
+          <h2>Designed at iPhone 14 Pro Dimensions</h2>
+          <p>Designed in Figma. The countdown is the centerpiece throughout — a bold digital number, not a ring, sized up from 80px on Home to 96px on Active.</p>
+          <div class="mz-screens">
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">M</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">01</span><span class="mz-name">Splash</span></div>
+            </div>
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">S</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">02</span><span class="mz-name">Spotify Connect</span></div>
+            </div>
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">＋</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">03</span><span class="mz-name">Home / Setup</span></div>
+            </div>
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">▶</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">04</span><span class="mz-name">Active / Rest</span></div>
+            </div>
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">✓</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">05</span><span class="mz-name">Workout Complete</span></div>
+            </div>
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">≡</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">06</span><span class="mz-name">History — Collapsed</span></div>
+            </div>
+            <div class="mz-phone">
+              <div class="mz-phone-frame"><div class="mz-glyph">⌄</div></div>
+              <div class="mz-phone-caption"><span class="mz-idx">07</span><span class="mz-name">History — Expanded</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04 LOCKED DECISIONS -->
+        <section class="archive-section">
+          <p class="archive-section-label">04 — Locked Decisions</p>
+          <h2>What Was Decided, and Why</h2>
+          <div class="mz-decision-list">
+            <div class="mz-decision">
+              <span class="mz-decision-tag">01</span>
+              <p><strong>Digital countdown over ring timer</strong> — a large bold number reads faster mid-set than an arc does. 80px on Home, 96px on Active.</p>
+            </div>
+            <div class="mz-decision">
+              <span class="mz-decision-tag">02</span>
+              <p><strong>Spotify Connect carries MuzTime's own accent</strong> — not Spotify green. The app needed its own identity from screen one.</p>
+            </div>
+            <div class="mz-decision">
+              <span class="mz-decision-tag">03</span>
+              <p><strong>Active track lives in a bottom sheet</strong> — playlist name, Spotify deep link, and current track, without covering the countdown.</p>
+            </div>
+            <div class="mz-decision">
+              <span class="mz-decision-tag">04</span>
+              <p><strong>Workout review as a one-line pill</strong> — the summary earns a glance, not a screen.</p>
+            </div>
+            <div class="mz-decision">
+              <span class="mz-decision-tag">05</span>
+              <p><strong>History groups by playlist</strong> — one tappable header drills into a list; AI-recommended tracks are flagged distinctly, never blended in unlabeled.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05 WHERE IT STANDS -->
+        <section class="archive-section">
+          <p class="archive-section-label">05 — Where It Stands</p>
+          <h2>Seven Screens, Backend in Progress</h2>
+          <p>Seven screens designed and decided. Backend build against the Spotify Web API is in progress — Python, learned largely on this project.</p>
+          <div class="archive-card">
+            <h3>Status</h3>
+            <ul class="archive-tag-list">
+              <li>7 / 7 screens designed</li>
+              <li>3 core systems locked</li>
+              <li>2 cuts made on purpose</li>
+              <li>v0.4 current build</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer-flat">
+    <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    // "Back" link reflects wherever the visitor actually came from — Projects
+    // (index.html) or Archive (achive.html) — rather than a single hardcoded
+    // page, since every case study is reachable from both.
+    (function () {
+      var back = document.getElementById('case-back-link');
+      if (!back) return;
+      try {
+        if (document.referrer) {
+          var ref = new URL(document.referrer);
+          if (ref.origin === window.location.origin) {
+            var refFile = ref.pathname.split('/').pop() || 'index.html';
+            if (refFile === 'achive.html') {
+              back.setAttribute('href', 'achive.html');
+              back.textContent = '← Back to Archive';
+            }
+          }
+        }
+      } catch (e) { /* leave the default Projects link in place */ }
+    })();
+  </script>
+
+</body>
+</html>
