@@ -3,56 +3,261 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>woobee studio | Home</title>
+    <title>Solbee Lee — Projects</title>
     <link rel="stylesheet" type="text/css" href="normalize_v8.0.1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <style>
-      
-      
-    </style>
-</head>      
-    <header class="header-background">
-        <h1>WOOBEE</h1>
-        <br><h2>ARCHIEVE</h2>
-    </header>
-    
-  
-    <section class="hero">
-      <div class="hero-wrapper">
-        <!-- Left Side: Image and Intro -->
-        <div class="intro-column">
-          <div class="img-container">
-            <img src="PHOTOS/running.png" alt="Running character" class="running-img">
-          </div>
-          <div class="name">
-            <h2>SOLBEE LEE</h2>
-          </div> 
-          <div class="overlay-box">
-            <p>Hello!<br> 
-              Hi, my name is Solbee Lee, I'm a sophomore at the STAMPS school of Art & Design, University of Michigan-Ann Arbor  :)<br> 
-              
-            </p>
-          </div>
-        </div>
-    
-        <!-- Right Side: Navigation -->
-        <div class="nav-folder">
-          <a href="about.html" class="folder">ABOUT ME</a>
-          <!-- <a href="shop.html" class="folder">SHOP</a> -->
-          <a href="project.html" class="folder">PORTFOLIO</a>
-          <a href="contact.html" class="folder">CONTACT</a>
-        </div>
-      </div>
-    </section>
+</head>
 
-    <footer style="text-align: center; padding: 2rem 1rem; font-size: 0.9rem; color: #5A4B41;">
-      <p>
-        &copy; 2026 <a href="https://sol-maru.github.io/Moribee-Studio/" target="_blank" style="color: #5A4B41; text-decoration: underline;">
-          WooBee Archieve
-        </a>. All rights reserved.
-      </p>
-    </footer>
+<body class="page-home">
+
+  <nav class="nav-topleft" aria-label="Primary">
+    <a href="index.html" aria-current="page">Projects</a>
+    <a href="study.html">Study with Me</a>
+    <a href="about.html">About me</a>
+    <a href="achive.html">Archive</a>
+  </nav>
+
+  <!-- FULL-VIEWPORT HERO — pinned in place; the projects section
+       below scrolls up over it rather than the hero scrolling away. -->
+  <header class="hero-full" id="hero-panel">
+    <svg class="hero-blob-svg" aria-hidden="true" focusable="false">
+      <filter id="hero-goo" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </svg>
+    <div class="hero-blob-field" aria-hidden="true">
+      <div class="hero-blob-layer" id="hero-blob-layer">
+        <span class="hero-blob hero-blob-a"></span>
+        <span class="hero-blob hero-blob-b"></span>
+        <span class="hero-blob hero-blob-c"></span>
+        <span class="hero-blob hero-blob-d"></span>
+        <span class="hero-blob hero-blob-e"></span>
+        <span class="hero-blob hero-blob-f"></span>
+        <span class="hero-blob hero-blob-g"></span>
+        <span class="hero-blob hero-blob-cursor" id="hero-blob-cursor"></span>
+      </div>
+      <div class="hero-blob-linework"></div>
+    </div>
+    <div class="hero-full-inner">
+      <h1 class="site-hero-name">Solbee&nbsp;Lee</h1>
+      <hr class="hero-rule">
+      <p class="hero-intro">is a UX · Product Designer <br> UX Design BSI · Art&Design BA · entrepreneurship minor <br> @ University of Michigan <br> based in Bay Area</p>
+      <div class="hero-links">
+        <a href="mailto:sol16.rena@gmail.com" target="_blank" rel="noopener">Email</a>
+        <a href="https://www.linkedin.com/in/solbee-lee-053358386/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <button class="hero-scroll-cue" id="scroll-cue" aria-label="Scroll to projects">
+      <span class="hero-scroll-arrow">↓</span>
+      <span>Projects</span>
+    </button>
+  </header>
+
+  <div class="hero-spacer" aria-hidden="true"></div>
+
+  <main class="projects-section" id="projects-section">
+
+    <div class="projects-list-col">
+      <div class="project-list-v2">
+
+        <a href="case_nd.html" class="project-row"
+           data-title="Project ND" data-tag="Web App · Personal Project"
+           data-desc="Personal homework assistant for autistic students who get the work done but not the understanding."
+           data-img="IMG_/UIUX/nd.jpg">
+          <span class="project-row-num">01</span>
+          <span class="project-row-text">
+            <span class="project-row-title">Project ND</span>
+            <span class="project-row-tag">Web App · Personal Project</span>
+          </span>
+        </a>
+
+        <a href="case_archive.html" class="project-row"
+           data-title="Archive" data-tag="Portfolio Website · UX/UI"
+           data-desc="A digital Atelier of all of my projects built from scratch with HTML, CSS, and JavaScript."
+           data-img="IMG_/UIUX/woobee.jpg">
+          <span class="project-row-num">02</span>
+          <span class="project-row-text">
+            <span class="project-row-title">Archive</span>
+            <span class="project-row-tag">Portfolio Website · UX/UI</span>
+          </span>
+        </a>
+
+        <a href="case_eunara.html" class="project-row"
+           data-title="은아라" data-tag="macOS App · Character Design"
+           data-desc="Chat widget connected to LLM to handle instantanous thoughts and idea development"
+           data-img="IMG_/UIUX/eunara.jpg">
+          <span class="project-row-num">03</span>
+          <span class="project-row-text">
+            <span class="project-row-title">은아라</span>
+            <span class="project-row-tag">macOS App · Character Design</span>
+          </span>
+        </a>
+
+        <a href="case_muztime.html" class="project-row"
+           data-title="MuzTime" data-tag="Mobile App · Product Design"
+           data-desc="A workout interval timer that syncs with Spotify — pausing when the music pauses, queuing tracks by energy arc."
+           data-img="IMG_/UIUX/muztime.jpg">
+          <span class="project-row-num">04</span>
+          <span class="project-row-text">
+            <span class="project-row-title">MuzTime</span>
+            <span class="project-row-tag">Mobile App · Product Design</span>
+          </span>
+        </a>
+
+        <a href="study.html" class="project-row"
+           data-title="Study with Me" data-tag="Interactive Experiment · UX/UI Design"
+           data-desc="Small interactive experiments and mood pieces built on the side — starting with Rainy Cafe, a rainy study-café scene."
+           data-img="rainy-cafe-thumb.jpg">
+          <span class="project-row-num">05</span>
+          <span class="project-row-text">
+            <span class="project-row-title">Study with Me</span>
+            <span class="project-row-tag">Interactive Experiment · UX/UI Design</span>
+          </span>
+        </a>
+
+        <a href="achive.html" class="project-row"
+           data-title="Vinted Redesign" data-tag="Mobile App · UI/UX Redesign"
+           data-desc="A redesign concept exploring cleaner browsing and listing flows for the Vinted marketplace app."
+           data-img="IMG_/UIUX/vinted.jpg">
+          <span class="project-row-num">06</span>
+          <span class="project-row-text">
+            <span class="project-row-title">Vinted Redesign</span>
+            <span class="project-row-tag">Mobile App · UI/UX Redesign</span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+
+    <aside class="project-preview" id="project-preview" aria-hidden="true">
+      <div class="project-preview-content">
+        <div class="project-preview-visual" id="preview-visual">
+          <img class="preview-visual-img" id="preview-visual-img" alt="" hidden>
+          <span class="preview-visual-text" id="preview-visual-text"></span>
+        </div>
+        <p class="project-preview-tag" id="preview-tag"></p>
+        <h3 class="project-preview-title" id="preview-title"></h3>
+        <p class="project-preview-desc" id="preview-desc"></p>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer-flat">
+    <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Metaball blob field — ambient blobs drift on their own via CSS; this
+    // just steers the one "cursor" blob toward the pointer, eased so it
+    // trails smoothly rather than snapping to each pointermove event.
+    (function () {
+      var hero = document.getElementById('hero-panel');
+      var cursorBlob = document.getElementById('hero-blob-cursor');
+      if (!hero || !cursorBlob) return;
+
+      var targetX = null, targetY = null;
+      var curX = 0, curY = 0, started = false;
+
+      hero.addEventListener('pointermove', function (e) {
+        var rect = hero.getBoundingClientRect();
+        targetX = e.clientX - rect.left;
+        targetY = e.clientY - rect.top;
+        if (!started) { curX = targetX; curY = targetY; started = true; }
+      });
+
+      function raf() {
+        if (targetX !== null) {
+          curX += (targetX - curX) * 0.12;
+          curY += (targetY - curY) * 0.12;
+          cursorBlob.style.transform =
+            'translate3d(' + (curX - 65) + 'px,' + (curY - 65) + 'px, 0)';
+        }
+        requestAnimationFrame(raf);
+      }
+      raf();
+    })();
+
+    // Custom ease-out smooth scroll — native scrollIntoView's easing can't
+    // be customized, so this animates scrollY on an ease-out curve instead.
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function smoothScrollTo(targetY, duration) {
+      var startY = window.scrollY;
+      var diff = targetY - startY;
+      var startTime = null;
+
+      function step(timestamp) {
+        if (startTime === null) startTime = timestamp;
+        var elapsed = timestamp - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        window.scrollTo(0, startY + diff * easeOutCubic(progress));
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    // Scroll cue — jumps from the hero to the projects section, eased out.
+    (function () {
+      var cue = document.getElementById('scroll-cue');
+      var target = document.getElementById('projects-section');
+      if (!cue || !target) return;
+      cue.addEventListener('click', function () {
+        var targetY = target.getBoundingClientRect().top + window.scrollY;
+        smoothScrollTo(targetY, 900);
+      });
+    })();
+
+    // Hover/focus preview — updates the right-hand panel with the
+    // hovered project's info. Swap the placeholder visual for a real
+    // <img> per project once screenshots exist.
+    (function () {
+      var rows    = document.querySelectorAll('.project-row');
+      var preview = document.getElementById('project-preview');
+      var visual  = document.getElementById('preview-visual');
+      var tag     = document.getElementById('preview-tag');
+      var title   = document.getElementById('preview-title');
+      var desc    = document.getElementById('preview-desc');
+
+      var visualImg  = document.getElementById('preview-visual-img');
+      var visualText = document.getElementById('preview-visual-text');
+
+      function showPreview(row) {
+        var imgSrc = row.dataset.img;
+        if (imgSrc) {
+          visualImg.src = imgSrc;
+          visualImg.alt = row.dataset.title || '';
+          visualImg.hidden = false;
+          visualText.textContent = '';
+        } else {
+          visualImg.hidden = true;
+          visualImg.src = '';
+          visualText.textContent = row.dataset.title || '';
+        }
+        tag.textContent    = row.dataset.tag || '';
+        title.textContent  = row.dataset.title || '';
+        desc.textContent   = row.dataset.desc || '';
+        preview.classList.add('is-visible');
+        preview.setAttribute('aria-hidden', 'false');
+      }
+
+      function hidePreview() {
+        preview.classList.remove('is-visible');
+        preview.setAttribute('aria-hidden', 'true');
+      }
+
+      rows.forEach(function (row) {
+        row.addEventListener('mouseenter', function () { showPreview(row); });
+        row.addEventListener('focus',      function () { showPreview(row); });
+        row.addEventListener('mouseleave', hidePreview);
+        row.addEventListener('blur',       hidePreview);
+      });
+    })();
+  </script>
 
 </body>
 </html>
