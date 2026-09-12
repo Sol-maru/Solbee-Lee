@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Solbee Lee — Project ND Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="page-case page-nd">
+
+  <!-- NAV -->
+  <nav class="nav-topleft" aria-label="Primary">
+    <a href="index.html">Projects</a>
+    <a href="study.html">Study with Me</a>
+    <a href="about.html">About me</a>
+    <a href="achive.html">Archive</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="archive-hero">
+    <div class="archive-hero-text">
+      <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
+      <p class="archive-hero-eyebrow">Personal / Family Project · UX/UI Design</p>
+      <h1>Project ND</h1>
+      <p class="archive-hero-desc">Personal homework assistant for autistic students who get the work done but not the understanding.</p>
+      <div class="archive-meta">
+        <span class="archive-pill"><strong>Role</strong> Designer · Builder</span>
+        <span class="archive-pill"><strong>Stack</strong> Claude Design</span>
+        <span class="archive-pill"><strong>Status</strong> Early Mockup</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTAINER ── -->
+  <main class="archive-main">
+    <div class="archive-container">
+      <div class="archive-body">
+
+        <!-- 01 WHY I'M BUILDING THIS -->
+        <section class="archive-section">
+          <p class="archive-section-label">01 — Why I'm Building This</p>
+          <h2>Closing the Understanding Gap</h2>
+          <p>My brother's homework gets done — for the grade — without him actually understanding the material underneath it. That gap is the whole problem this app exists to close.</p>
+          <div class="archive-two-col">
+            <div class="archive-card">
+              <h3>The Problem</h3>
+              <p>Getting help usually means someone just gives the answer, or homework becomes a nightly negotiation over how much a parent should step in. Neither one teaches the material.</p>
+            </div>
+            <div class="archive-card">
+              <h3>The Goal</h3>
+              <p>Paste in the homework, work through it one question at a time, and get redirected toward the answer rather than told it — while cutting down how much time a parent has to spend sitting next to him to get through it.</p>
+            </div>
+          </div>
+
+          <div class="nd-pages-strip">
+            <button class="nd-page-thumb" type="button" data-nd-page="0">
+              <img src="IMG_/ND/nd-page1-thumb.jpg" alt="Page 1 of the real Claude Design mockup — pasting homework in." loading="lazy">
+              <span class="nd-page-thumb-label">01 · Paste It In</span>
+            </button>
+            <button class="nd-page-thumb" type="button" data-nd-page="1">
+              <img src="IMG_/ND/nd-page2-thumb.jpg" alt="Page 2 of the real Claude Design mockup — the session recap." loading="lazy">
+              <span class="nd-page-thumb-label">02 · Session Recap</span>
+            </button>
+            <button class="nd-page-thumb" type="button" data-nd-page="2">
+              <img src="IMG_/ND/nd-page3-thumb.jpg" alt="Page 3 of the real Claude Design mockup — a live hint exchange." loading="lazy">
+              <span class="nd-page-thumb-label">03 · Live Session</span>
+            </button>
+          </div>
+          <p class="nd-pages-strip-caption">A run-through of the real Claude Design mockup — click any screen to step through all three.</p>
+        </section>
+
+        <!-- 02 HOW IT WORKS -->
+        <section class="archive-section">
+          <p class="archive-section-label">02 — How It Works</p>
+          <h2>Paste It In, One at a Time</h2>
+          <div class="nd-how-grid">
+            <div class="nd-how-text">
+              <p>Homework goes in as pasted text. From there, the app's whole job is pacing and framing — one question, restated plainly, with help that escalates only as needed.</p>
+              <div class="nd-how-steps">
+                <div class="archive-card">
+                  <h3>Step 01 — Paste It In</h3>
+                  <p>The full assignment goes into a prompt area, no formatting cleanup required.</p>
+                </div>
+                <div class="archive-card">
+                  <h3>Step 02 — One at a Time</h3>
+                  <p>The app breaks the set apart and surfaces a single question, restated in plain language.</p>
+                </div>
+              </div>
+            </div>
+            <figure class="nd-how-shot">
+              <img src="IMG_/ND/nd-chat-example.jpg" alt="Real Claude Design mockup of a live hint exchange: the assistant restates the question in plain words, tracks a two-part answer, and offers an escalating hint ladder." loading="lazy">
+              <figcaption>From the actual Claude Design mockup — a live hint exchange, mid-session.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 03 THE HINT LADDER -->
+        <section class="archive-section">
+          <p class="archive-section-label">03 — The Hint Ladder</p>
+          <h2>A Rung to Climb, Not a Wrong Answer</h2>
+          <p>Wrong answers don't get marked wrong — they get another rung to climb. Each hint tier gives away a little more, never the answer itself.</p>
+          <div class="nd-ladder">
+            <div class="nd-rung nd-rung-1">
+              <div class="nd-rung-label">Rung 1</div>
+              <p>Restate the question in plain language — what is it actually asking?</p>
+            </div>
+            <div class="nd-rung nd-rung-2">
+              <div class="nd-rung-label">Rung 2</div>
+              <p>Point toward the concept or formula that applies here, without naming the steps.</p>
+            </div>
+            <div class="nd-rung nd-rung-3">
+              <div class="nd-rung-label">Rung 3</div>
+              <p>Walk the first step alongside him, then hand the rest back.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04 STAYING MOTIVATED -->
+        <section class="archive-section">
+          <p class="archive-section-label">04 — Staying Motivated</p>
+          <h2>A Light Reward, A Parent's View</h2>
+          <p>A light token and reward element — small, not gamified into a slot machine — plus a parent-facing view that's meant to shrink hovering, not replace it.</p>
+          <div class="nd-punchrow" aria-hidden="true">
+            <div class="nd-punch nd-done">✓</div>
+            <div class="nd-punch nd-done">✓</div>
+            <div class="nd-punch nd-done">✓</div>
+            <div class="nd-punch">·</div>
+            <div class="nd-punch">·</div>
+            <div class="nd-punch">·</div>
+            <div class="nd-punch">·</div>
+          </div>
+          <div class="archive-card nd-parent-note">
+            <h3>For the Parent View</h3>
+            <p>A quick read on progress and where he got stuck, so helping doesn't mean sitting through the whole assignment start to finish.</p>
+          </div>
+          <figure class="nd-progress-shot">
+            <img src="IMG_/ND/nd-progress-trend.jpg" alt="Real Claude Design mockup: a small chart showing the average hint level trending down over five sessions." loading="lazy">
+            <figcaption>From the actual mockup — the parent view's five-session trend, same real data.</figcaption>
+          </figure>
+        </section>
+
+        <!-- 05 WHERE IT STANDS -->
+        <section class="archive-section">
+          <p class="archive-section-label">05 — Where It Stands</p>
+          <h2>Still Early, Still Ours</h2>
+          <p>Built for our family, for now — whether it becomes a portfolio piece is still an open question. The Figma mockup is the current source of truth.</p>
+          <div class="archive-card">
+            <h3>Status</h3>
+            <ul class="archive-tag-list">
+              <li>v0.1 — Figma mockup</li>
+              <li>3 hint tiers defined</li>
+              <li>1 intended user</li>
+              <li>Portfolio status: TBD</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer-flat">
+    <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
+  </footer>
+
+  <!-- ── LIGHTBOX MODAL ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&#x2715;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">←</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">→</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </div>
+
+  <script>
+    // ── Lightbox state ──
+    const lightbox      = document.getElementById('lightbox');
+    const lightboxImg   = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev  = document.getElementById('lightbox-prev');
+    const lightboxNext  = document.getElementById('lightbox-next');
+
+    let currentImages = [];
+    let currentIndex  = 0;
+
+    function openLightbox(images, index) {
+      currentImages = images;
+      currentIndex  = index;
+      updateLightbox();
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lightboxClose.focus();
+      const multi = images.length > 1;
+      lightboxPrev.style.display = multi ? 'flex' : 'none';
+      lightboxNext.style.display = multi ? 'flex' : 'none';
+    }
+
+    function updateLightbox() {
+      const { src, title } = currentImages[currentIndex];
+      lightboxImg.src = src;
+      lightboxImg.alt = title;
+      lightboxTitle.textContent = currentImages.length > 1
+        ? `${title} (${currentIndex + 1} / ${currentImages.length})`
+        : title;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+      currentImages = [];
+    }
+
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      updateLightbox();
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      updateLightbox();
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft'  && currentImages.length > 1) { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
+      if (e.key === 'ArrowRight' && currentImages.length > 1) { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
+    });
+
+    // ── "Run through of all pages" filmstrip (01 — Why) ──
+    const ndPages = [
+      { src: 'IMG_/ND/nd-page1-full.jpg',         title: 'Project ND — 01 Paste It In' },
+      { src: 'IMG_/ND/nd-homework-breakdown.jpg', title: 'Project ND — 02 Session Recap' },
+      { src: 'IMG_/ND/nd-page3-full.jpg',         title: 'Project ND — 03 Live Session' },
+    ];
+    document.querySelectorAll('.nd-page-thumb').forEach((btn) => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openLightbox(ndPages, parseInt(btn.dataset.ndPage, 10));
+      });
+    });
+  </script>
+
+  <script>
+    // "Back" link reflects wherever the visitor actually came from — Projects
+    // (index.html) or Archive (achive.html) — rather than a single hardcoded
+    // page, since every case study is reachable from both.
+    (function () {
+      var back = document.getElementById('case-back-link');
+      if (!back) return;
+      try {
+        if (document.referrer) {
+          var ref = new URL(document.referrer);
+          if (ref.origin === window.location.origin) {
+            var refFile = ref.pathname.split('/').pop() || 'index.html';
+            if (refFile === 'achive.html') {
+              back.setAttribute('href', 'achive.html');
+              back.textContent = '← Back to Archive';
+            }
+          }
+        }
+      } catch (e) { /* leave the default Projects link in place */ }
+    })();
+  </script>
+
+</body>
+</html>
