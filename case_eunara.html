@@ -169,7 +169,7 @@
 
   <script>
     // "Back" link reflects wherever the visitor actually came from — Projects
-    // (index.html) or Archive (achive.html) — rather than a single hardcoded
+    // (index.html) or Archive (archive.html) — rather than a single hardcoded
     // page, since every case study is reachable from both.
     (function () {
       var back = document.getElementById('case-back-link');
@@ -179,8 +179,8 @@
           var ref = new URL(document.referrer);
           if (ref.origin === window.location.origin) {
             var refFile = ref.pathname.split('/').pop() || 'index.html';
-            if (refFile === 'achive.html') {
-              back.setAttribute('href', 'achive.html');
+            if (refFile === 'archive.html') {
+              back.setAttribute('href', 'archive.html');
               back.textContent = '← Back to Archive';
             }
           }

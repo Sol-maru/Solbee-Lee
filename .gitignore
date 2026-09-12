@@ -1,0 +1,14 @@
+# Personal working files — raw source art, drafts, certificates, resumes.
+# Never push this to a public repo: it's far too large for a git repo
+# (800+ MB of PSDs/HEICs) and contains personal documents (health
+# certificate, acceptance letter, resumes) that shouldn't be public.
+# Anything the live site actually needs to link to should be copied
+# into /assets/ (tracked) instead of linked to directly from here.
+PORTFOLIO/
+
+# Internal working/history folders — not meant to be part of the
+# published site.
+HISTORY/
+Claude outputs/
+
+.DS_Store
