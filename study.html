@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Solbee Lee — Study with Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <style>
+    /* ── Rainy Cafe popup — scoped to this page only ── */
+    .cafe-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(16, 31, 20, 0.82);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: clamp(0.75rem, 3vw, 2rem);
+    }
+    .cafe-modal.open { display: flex; }
+    .cafe-modal-panel {
+      position: relative;
+      width: min(1440px, 97%);
+      height: min(920px, 96vh);
+      display: flex;
+      flex-direction: column;
+      background: var(--evergreen-deep);
+      border: 1px solid var(--hairline-on-dark);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+    }
+    .cafe-modal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.7rem 0.9rem;
+      background: var(--evergreen);
+      border-bottom: 1px solid var(--hairline-on-dark);
+      flex-wrap: wrap;
+    }
+    .cafe-modal-tabs { display: flex; gap: 0.4rem; }
+    .cafe-modal-tab {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(251, 254, 249, 0.65);
+      background: none;
+      border: 1px solid var(--hairline-on-dark);
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .cafe-modal-tab:hover { color: var(--porcelain); }
+    .cafe-modal-tab.active {
+      background: var(--moss);
+      border-color: var(--moss);
+      color: var(--porcelain);
+    }
+    .cafe-modal-close {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--porcelain);
+      background: none;
+      border: 1px solid var(--hairline-on-dark);
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .cafe-modal-close:hover { background: rgba(251, 254, 249, 0.12); }
+    .cafe-modal-body { position: relative; flex: 1; background: #0d2535; }
+    .cafe-modal-body iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .cafe-modal-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(251, 254, 249, 0.5);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    @media (max-width: 600px) {
+      .cafe-modal-tab, .cafe-modal-close { font-size: 0.66rem; padding: 0.4rem 0.75rem; }
+    }
+  </style>
+</head>
+
+<body class="page-archive page-study">
+
+  <!-- NAV -->
+  <nav class="nav-topleft" aria-label="Primary">
+    <a href="index.html">Projects</a>
+    <a href="study.html" aria-current="page">Study with Me</a>
+    <a href="about.html">About me</a>
+    <a href="achive.html">Archive</a>
+  </nav>
+
+  <!-- COMPACT PAGE HEADER -->
+  <header class="page-intro">
+    <p class="page-intro-eyebrow">Playground</p>
+    <h1>Studies</h1>
+    <p class="page-intro-desc">Small interactive experiments and mood pieces I build on the side — not case studies, just things I wanted to make. Step into one below.</p>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="project-container">
+    <main class="project-main">
+      <div class="project-grid">
+
+        <a href="rainy-cafe.html" class="card" id="card-rainy-cafe">
+          <img class="card-img" src="rainy-cafe-thumb.jpg" alt="Rainy Cafe — a rainy study café interactive scene">
+          <div class="card-body">
+            <span class="card-tag">Interactive Experiment · Ambience</span>
+            <h2 class="card-title">Rainy Cafe</h2>
+            <p class="card-desc">A rainy café study room built as a mood piece — soft rain against the window, a fireplace, and a quiet table to sit at while something else does the thinking.</p>
+            <span class="card-link">Step inside →</span>
+          </div>
+        </a>
+
+        <article class="card card-coming-soon">
+          <div class="card-img-placeholder">Coming soon</div>
+          <div class="card-body">
+            <span class="card-tag">Coming Soon</span>
+            <h2 class="card-title">More Experiments</h2>
+            <p class="card-desc">More small interactive builds will land here over time.</p>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer-flat">
+    <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
+  </footer>
+
+  <!-- ── RAINY CAFE POPUP ──
+       One instance of rainy-cafe.html stays loaded in the iframe for the
+       whole time the popup is open. The Start/Menu/Study tabs don't reload
+       it — they postMessage the app to jump pages, and the app posts back
+       whenever its own buttons (enter, take a seat, back, leave) change the
+       page, so the tabs stay in sync either way. -->
+  <div class="cafe-modal" id="cafe-modal" role="dialog" aria-modal="true" aria-label="Rainy Cafe">
+    <div class="cafe-modal-panel">
+      <div class="cafe-modal-bar">
+        <div class="cafe-modal-tabs" role="tablist" aria-label="Rainy Cafe pages">
+          <button class="cafe-modal-tab" role="tab" data-page="1">Start</button>
+          <button class="cafe-modal-tab" role="tab" data-page="2">Menu</button>
+          <button class="cafe-modal-tab" role="tab" data-page="3">Study</button>
+        </div>
+        <button class="cafe-modal-close" id="cafe-modal-close" aria-label="Close Rainy Cafe">Close ✕</button>
+      </div>
+      <div class="cafe-modal-body">
+        <div class="cafe-modal-loading" id="cafe-modal-loading">Loading…</div>
+        <iframe id="cafe-modal-frame" title="Rainy Cafe" src="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var card     = document.getElementById('card-rainy-cafe');
+      var modal    = document.getElementById('cafe-modal');
+      var frame    = document.getElementById('cafe-modal-frame');
+      var loading  = document.getElementById('cafe-modal-loading');
+      var closeBtn = document.getElementById('cafe-modal-close');
+      var tabs     = modal.querySelectorAll('.cafe-modal-tab');
+      var CAFE_SRC = 'rainy-cafe.html';
+
+      function setActiveTab(page) {
+        tabs.forEach(function (t) {
+          t.classList.toggle('active', Number(t.dataset.page) === Number(page));
+        });
+      }
+
+      // Tabs drive the app forward — they ask it to jump pages rather than
+      // reloading the iframe, so the Pomodoro timer keeps running underneath
+      // even while you're looking at the Start or Menu screen.
+      function goToPage(page) {
+        setActiveTab(page);
+        if (frame.contentWindow) {
+          frame.contentWindow.postMessage({ source: 'study-with-me', type: 'goto', page: page }, '*');
+        }
+      }
+
+      // The app drives the tabs back — its own buttons (enter, take a seat,
+      // back, leave) report the page they land on.
+      window.addEventListener('message', function (e) {
+        var d = e.data;
+        if (!d || d.source !== 'rainy-cafe' || d.type !== 'page') return;
+        setActiveTab(d.page);
+        loading.style.display = 'none';
+      });
+
+      frame.addEventListener('load', function () {
+        if (frame.src && frame.src !== 'about:blank') loading.style.display = 'none';
+      });
+
+      function openModal() {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        loading.style.display = 'flex';
+        setActiveTab(1);
+        // Load fresh each time the popup opens (a clean Pomodoro session).
+        frame.src = CAFE_SRC;
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        frame.src = 'about:blank'; // stop audio/animation/timers immediately
+        loading.style.display = 'flex';
+      }
+
+      card.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { goToPage(Number(tab.dataset.page)); });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+      });
+    })();
+  </script>
+
+</body>
+</html>
