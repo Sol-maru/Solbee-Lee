@@ -24,7 +24,7 @@
       <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
       <p class="archive-hero-eyebrow">Portfolio Website · UX/UI Design</p>
       <h1>Woobee Archive</h1>
-      <p class="archive-hero-desc">My personal portfolio site, built from scratch with HTML, CSS, and JavaScript — and, as of September 2026, rebuilt from an archival forest-green/parchment identity into a porcelain-and-evergreen system that reads as quiet, professional, and a little bit dark academia.</p>
+      <p class="archive-hero-desc">My personal portfolio site, built from scratch with HTML, CSS, and a little JavaScript through Claude. Rebuilt as of September 2026.</p>
       <div class="archive-meta">
         <span class="archive-pill"><strong>Role</strong> Designer · Developer</span>
         <span class="archive-pill"><strong>Stack</strong> HTML · CSS · JavaScript</span>
@@ -42,17 +42,19 @@
         <!-- 01 OVERVIEW -->
         <section class="archive-section">
           <p class="archive-section-label">01 — Overview</p>
-          <h2>What is Woobee Archive?</h2>
-          <p>Woobee Archive is my personal portfolio website — a space to archive and present my work across fine arts, graphic design, and UX/UI. The name plays on my nickname "Bee" and the idea of an archive: a living collection that grows over time.</p>
-          <p>The site is built entirely by hand with HTML, CSS, and vanilla JavaScript — no frameworks, no templates — and hosted on GitHub Pages. In September 2026 I moved the whole thing off its original identity (deep forest green, parchment, brass accents, dashed "aged document" borders, a floating pill nav) onto a new system built around two colors: porcelain and evergreen.</p>
+          <h2>Why is it Woobee Archive?</h2>
+          <div class="archive-section-desc">
+            <p>Woobee Archive is my personal portfolio website, a digital atelier for my art works.</p>
+            <p>I chose this portfolio to be archival to express my multidisciplinary background. While I currently focus on website building and UX/UI designs, I come from a fine arts background with some experience in media arts as well including cinematography, 3D works, and video editing. This is my third design system for this portfolio and these processes were a chance for me to research about myself and embracing the multidimensionality of a person.</p>
+          </div>
           <div class="archive-two-col">
             <div class="archive-card">
               <h3>The Challenge</h3>
-              <p>The old archival theme fought against what it was supposed to hold — UX/UI case studies, fine art paintings, and a pixel-art character design all sitting under the same skeuomorphic folder icons and brass borders. It read as antique rather than intentional.</p>
+              <p>The old archival design system had low hierarchy order of my projects from UX/UI case studies, fine art paintings, and a pixel-art character design all sitting under the same skeuomorphic folder icons and brass borders.</p>
             </div>
             <div class="archive-card">
               <h3>The Goal</h3>
-              <p>A professional, green-based system — conceptual and utilitarian, with just enough dark-academia gravitas — where serif type is used sparingly, only as a highlight for my name and project titles, and everything else is carried by a plain mono/sans type system.</p>
+              <p>A shift towards professional, green-based system with a mix conceptual and utilitarian design, with just enough dark-academia for a serif font highlight.</p>
             </div>
           </div>
         </section>
@@ -60,8 +62,7 @@
         <!-- 02 DESIGN DECISIONS -->
         <section class="archive-section">
           <p class="archive-section-label">02 — Design Decisions</p>
-          <h2>Porcelain, Evergreen, Moss</h2>
-          <p>The new palette is two anchors — porcelain (#FBFEF9) as the paper/surface and evergreen (#19381F) as the near-black ground — with moss (#5E7A63) as the supporting mid-tone that ties them together. Serif type (AW Conqueror Stincilla, falling back to Stardos Stencil, then Noto Serif KR for Hangul glyphs like 은아라) is reserved strictly for highlight moments — my name and project titles. Everything else runs on Inter for body copy and IBM Plex Mono for labels, tags, and index numbers.</p>
+          <p>The new palette is two anchors —  </p>
           <div class="archive-three-col">
             <div class="archive-step">
               <span class="archive-step-num">01</span>
@@ -76,81 +77,65 @@
             <div class="archive-step">
               <span class="archive-step-num">03</span>
               <h3>Hairlines, not borders</h3>
-              <p>Dashed brass borders and card shadows were replaced with single 1px hairlines (<code>--hairline-on-light</code> / <code>--hairline-on-dark</code>) — a quieter, more drafting-table way to separate content.</p>
+              <p>Dashed brass borders and card shadows were replaced with single 1px breaklines.</p>
+            </div>
+            <div class="archive-step">
+              <span class="archive-step-num">04</span>
+              <h3>New palette</h3>
+              <p>Porcelain (#FBFEF9) as the paper/surface and evergreen (#19381F) as the near-black ground — with moss.</p>
+            </div>
+            <div class="archive-step">
+              <span class="archive-step-num">05</span>
+              <h3>New font types</h3>
+              <p>Serif type (Stardos Stencil, then Noto Serif KR for Hangul glyphs like 은아라) for my name and project titles while everything else runs on Inter for body copy and IBM Plex Mono for labels, tags, and index numbers.</p>
+            </div>
+            <div class="archive-step">
+              <span class="archive-step-num">06</span>
+              <h3>The Hero</h3>
+              <p>The homepage hero is full-viewport and stays pinned in place. Translucent green-grey blobs that drift and merge, one trailing the cursor — the current version.</p>
+            </div>
+            <div class="archive-step">
+              <span class="archive-step-num">07</span>
+              <h3>Projects</h3>
+              <p>Below the hero, the homepage lists my UX/UI case studies with the mini tag now shown directly under each title, not just on hover. Hovering or focusing a row pops up a preview panel on the right with that project's tag, title, and description — completely hidden by default, scaled and sized to actually use the space the narrower list column leaves open.</p>
             </div>
           </div>
         </section>
 
-        <!-- 03 THE HERO -->
+        <!-- 03 PROCESS -->
         <section class="archive-section">
-          <p class="archive-section-label">03 — The Hero</p>
-          <h2>A Pinned Hero, Rebuilt Three Times</h2>
-          <p>The homepage hero is full-viewport and stays pinned in place while the project list scrolls up to cover it — done in pure CSS (a <code>position: fixed</code> hero, a same-height spacer, and a normal-flow section with a higher z-index and an opaque background), no scroll-driven JavaScript required.</p>
-          <p>The interactive light inside that hero went through three iterations based on feedback: a cursor-tracking spotlight first, then pond-style ripples that expanded and faded from the pointer, and finally a metaball blob field — several translucent moss-colored circles merged with an SVG goo filter (blur + contrast), styled deliberately translucent rather than solid so the name and intro text underneath stay legible, plus a couple of static thin-line circles for an astronomical-diagram kind of texture.</p>
-          <div class="archive-three-col">
-            <div class="archive-step">
-              <span class="archive-step-num">v1</span>
-              <h3>Cursor spotlight</h3>
-              <p>A radial-gradient light following the pointer — the first pass, functional but static.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">v2</span>
-              <h3>Pond ripples</h3>
-              <p>Rings spawned and expanded from the pointer on movement, like water — closer to "interactive," but not the mood.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">v3</span>
-              <h3>Metaball blobs</h3>
-              <p>Translucent green-grey blobs that drift and merge, one trailing the cursor — the current version.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- 04 PROJECT INDEX + HOVER PREVIEW -->
-        <section class="archive-section">
-          <p class="archive-section-label">04 — Project Index</p>
-          <h2>List on the Left, Preview on the Right</h2>
-          <p>Below the hero, the homepage lists four UX/UI case studies (Project ND, Archive, 은아라, MuzTime) with the mini tag now shown directly under each title, not just on hover. Hovering or focusing a row pops up a preview panel on the right with that project's tag, title, and description — completely hidden by default (no idle state, no empty-panel placeholder), scaled and sized to actually use the space the narrower list column leaves open.</p>
-          <div class="archive-card">
-            <h3>Key details</h3>
-            <ul class="archive-tag-list">
-              <li>CSS-only pinned hero (fixed + spacer + overlay)</li>
-              <li>SVG goo filter for the metaball light</li>
-              <li>Popup preview panel, opacity/pointer-events toggled by JS</li>
-              <li>Custom ease-out scroll animation (no native easing control)</li>
-              <li>Scoped per-page theming via body classes in one shared CSS file</li>
-              <li>Hosted on GitHub Pages</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- 05 PROCESS -->
-        <section class="archive-section">
-          <p class="archive-section-label">05 — Process</p>
-          <h2>From Reference to Rebuild</h2>
-          <p>The hero direction started from a reference site (yichenxie.com — a pinned, interactive hero) and moved through the three light treatments above based on round-by-round feedback, alongside a parallel search for a Korean serif that could stand in for 은아라 wherever the licensed highlight font isn't loaded.</p>
+          <p class="archive-section-label">03 — Process</p>
+          <p>This is my third iterated portfolio since I learned how to code. Before I ever touched this codebase, there was a round of paper wireframing, then a fully built site called Moribee Studio, then a second site called Studio Woobee (later renamed Woobee Archieve). Each one got rebuilt from the ground up as I learned more about what a portfolio actually needs to do. Below are real screenshots pulled straight from that history.</p>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 1 — Reference + first pass</h3>
+            <h3 class="archive-stage-title">Stage 1 — Early sketches</h3>
             <div class="archive-photo-row">
-              <div class="archive-photo-placeholder">Reference: yichenxie.com hero</div>
-              <div class="archive-photo-placeholder">v1: cursor spotlight</div>
-              <div class="archive-photo-placeholder">Sketch: full-page hero + scroll cue</div>
+              <img src="IMG_/archive-history/s1-sketch-home.jpg" alt="Early pencil wireframe — Woobee Studio homepage with folder navigation">
+              <img src="IMG_/archive-history/s1-sketch-about.jpg" alt="Early pencil wireframe — About Me page layout">
+              <img src="IMG_/archive-history/s1-sketch-portfolio.jpg" alt="Early pencil wireframe — Portfolio page with folder categories">
             </div>
           </div>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 2 — List + preview layout</h3>
+            <h3 class="archive-stage-title">Stage 2 — First portfolio: Moribee Studio</h3>
             <div class="archive-photo-row">
-              <div class="archive-photo-placeholder">Sketch: narrower list, popup preview</div>
-              <div class="archive-photo-placeholder">v2: pond ripples</div>
-              <div class="archive-photo-placeholder">Nav moved top-right</div>
+              <img src="IMG_/archive-history/s2-moribee-home.jpg" alt="Moribee Studio homepage with a painted koi fish hero image">
+              <img src="IMG_/archive-history/s2-moribee-portfolio.jpg" alt="Moribee Studio Fine Arts portfolio grid">
+              <img src="IMG_/archive-history/s2-moribee-message.jpg" alt="Moribee Studio contact page with a bee mascot illustration">
             </div>
           </div>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 3 — Current version</h3>
+            <h3 class="archive-stage-title">Stage 3 — Second portfolio: Studio Woobee</h3>
             <div class="archive-photo-row">
-              <div class="archive-photo-placeholder">v3: metaball blob field</div>
-              <div class="archive-photo-placeholder">About + Archive retheme</div>
-              <div class="archive-photo-placeholder">Woobee case study (this page)</div>
+              <img src="IMG_/archive-history/s3-woobee-home1.jpg" alt="Studio Woobee homepage with folder navigation and a rainy pond illustration">
+              <img src="IMG_/archive-history/s2-current-about.jpg" alt="This site's current About Me page">
+              <img src="IMG_/archive-history/s2-current-finearts.jpg" alt="This site's current Fine Arts portfolio grid">
+            </div>
+          </div>
+          <div class="archive-stage">
+            <h3 class="archive-stage-title">Stage 4 — Current design</h3>
+            <div class="archive-photo-row">
+              <img src="IMG_/archive-history/s4-current-index.jpg" alt="Current Projects page hero">
+              <img src="IMG_/archive-history/s4-current-project.jpg" alt="Current Projects page case-study list">
+              <img src="IMG_/archive-history/s4-current-archive.jpg" alt="Current Archive page">
             </div>
           </div>
         </section>
@@ -158,16 +143,16 @@
         <!-- 06 REFLECTION -->
         <section class="archive-section">
           <p class="archive-section-label">06 — Reflection</p>
-          <h2>What I'm Learning</h2>
-          <p>Rebuilding a site's whole identity mid-flight is different from starting one from scratch — every new page has to slot into decisions (palette, type, nav) made earlier, and every old page left un-migrated is a visible reminder of how much is left.</p>
+          <h2>Looking Back at the Growth</h2>
+          <p>Seeing all three portfolios side by side is honestly the most useful part of this page for me. The paper wireframes were me figuring out what sections even belong on a portfolio. Moribee Studio was the first time I shipped a real, multi-page site — but it was built page by page, with very little thought given to a consistent system. Studio Woobee was a step forward in identity (one hero, one palette, one mascot), but the structure underneath was still mostly guesswork.</p>
           <div class="archive-two-col">
             <div class="archive-card">
-              <h3>What went well</h3>
-              <p>The two-color spine (porcelain/evergreen) made every later decision easier — I could ask "does this read as archival or as the new system?" and usually know the answer immediately. The CSS-only pinned hero held up well across three completely different light effects without needing to be rebuilt.</p>
+              <h3>Growth as a designer</h3>
+              <p>The clearest change across the three versions is restraint. The earlier sites reached for a mascot, a hand-painted hero, a folder-icon metaphor — charming, but doing a lot of the visual work instead of the layout. This version leans on fewer, more deliberate choices: one accent color per case study, a consistent type scale, and a hero built to hold up across the whole redesign rather than being redrawn every time the mood changed.</p>
             </div>
             <div class="archive-card">
-              <h3>What's next</h3>
-              <p>Extending the same theme to Contact and Shop, and to the individual project case studies (Project ND, MuzTime, 은아라). Replacing the placeholder gradients above and in the project preview panel with real screenshots. Deciding where Contact belongs now that it's off the primary nav.</p>
+              <h3>Learning UX/UI basics</h3>
+              <p>Building three portfolios back to back is where a lot of the fundamentals actually clicked — information hierarchy, why a nav shouldn't compete with the content it's pointing to, what "consistent spacing" means once you're maintaining more than one page at a time. Studio Woobee's folder-icon navigation looked cute but wasn't self-explanatory; this version's more literal nav labels are a direct result of that lesson.</p>
             </div>
           </div>
         </section>

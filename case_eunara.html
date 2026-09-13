@@ -26,10 +26,10 @@
       <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
       <p class="archive-hero-eyebrow">Case Study 03 · Personal Project · macOS AI Assistant</p>
       <h1>은아라</h1>
-      <p class="archive-hero-desc">A calm, bilingual AI assistant that lives quietly on the desktop — closer to Siri or Copilot than to a character widget. She has a face (a pixel-art design of my own), but the point of the project is the chat and task system underneath it: reactive, never gamified, there to help a scattered thought become an actionable one.</p>
+      <p class="archive-hero-desc">A calm, bilingual AI assistant that lives quietly on the desktop — closer to Siri or Copilot than to a character widget. She has a face (a pixel-art design of my own), but the point of the project is the chat and task system underneath it.</p>
       <div class="archive-meta">
         <span class="archive-pill"><strong>Role</strong> Character Designer · Developer</span>
-        <span class="archive-pill"><strong>Stack</strong> Electron · SQLite · OpenRouter</span>
+        <span class="archive-pill"><strong>Stack</strong> OpenRouter · Claude</span>
       </div>
     </div>
   </header>
@@ -55,38 +55,30 @@
         <!-- 01 WHAT SHE'S FOR -->
         <section class="archive-section">
           <p class="archive-section-label">01 — What She's For</p>
-          <h2>An Assistant First, a Character Second</h2>
-          <p>Not a productivity tool wearing a mascot costume, and not a chat character built around a face — an AI assistant that only speaks when spoken to, and helps turn a messy situation into one clear next step. The character is how she's represented on screen, not the reason she exists.</p>
-          <div class="archive-two-col">
-            <div class="archive-card">
-              <h3>The Challenge</h3>
-              <p>Design a desktop assistant who feels calm and present rather than like another notification — and validate the one technical assumption everything else depends on: an always-on-top window that actually holds over fullscreen macOS apps.</p>
-            </div>
-            <div class="archive-card">
-              <h3>The Goal</h3>
-              <p>A light chat and task system that helps externalize thinking — fluently, in both Korean and English — paired with a face that never gamifies engagement.</p>
-            </div>
+          <div class="archive-section-desc">
+            <p>은아라 is supposedly my productivity help by assisting instantanous thought logging and development as a always on widget on screen.</p>
+          </div>
+          <div class="archive-card">
+            <h3>The Goal</h3>
+            <p>Building an always-on-top window that actually holds over fullscreen macOS apps and connects to claude for logging light chats and task systems that help externalize thinking — fluently, in both Korean and English — paired with a face that never gamifies engagement.</p>
           </div>
         </section>
 
         <!-- 02 THE FACE OF THE ASSISTANT -->
         <section class="archive-section">
           <p class="archive-section-label">02 — The Face of the Assistant</p>
-          <h2>Designed to Recede, Not Perform</h2>
-          <p>Hand-drawn, then adapted into pixel art. A few silhouette-breaking details — the off-shoulder jacket, the long ribbon streamers — each has to earn its place at sprite scale, since the face is meant to sit quietly on screen rather than draw attention to itself.</p>
+          <p>Hand-drawn pixel art. A few silhouette-breaking details — the off-shoulder jacket, the long ribbon streamers — inspired from a jellyfish.</p>
           <div class="ea-portholes">
-            <div class="ea-porthole"><div class="ea-porthole-ring"><span class="ea-porthole-glyph">↑</span></div><div class="ea-porthole-label">Front</div></div>
-            <div class="ea-porthole"><div class="ea-porthole-ring"><span class="ea-porthole-glyph">↓</span></div><div class="ea-porthole-label">Back</div></div>
-            <div class="ea-porthole"><div class="ea-porthole-ring"><span class="ea-porthole-glyph">←</span></div><div class="ea-porthole-label">Left</div></div>
-            <div class="ea-porthole"><div class="ea-porthole-ring"><span class="ea-porthole-glyph">→</span></div><div class="ea-porthole-label">Right</div></div>
+            <div class="ea-porthole"><div class="ea-porthole-ring"><img class="ea-porthole-img" src="IMG_/eunara/eunara-front.png" alt="은아라 character sprite, front view" loading="lazy"></div><div class="ea-porthole-label">Front</div></div>
+            <div class="ea-porthole"><div class="ea-porthole-ring"><img class="ea-porthole-img" src="IMG_/eunara/eunara-back.png" alt="은아라 character sprite, back view" loading="lazy"></div><div class="ea-porthole-label">Back</div></div>
+            <div class="ea-porthole"><div class="ea-porthole-ring"><img class="ea-porthole-img" src="IMG_/eunara/eunara-moving.png" alt="은아라 character sprite, moving pose" loading="lazy"></div><div class="ea-porthole-label">Moving</div></div>
           </div>
           <ul class="archive-tag-list ea-spec-list">
-            <li>White-to-sky-blue gradient hair</li>
+            <li>Sky-blue hair</li>
             <li>Navy sailor hat, double ribbon trim</li>
-            <li>Off-shoulder black jacket, sailor collar</li>
+            <li>Off-shoulder black jacket</li>
             <li>White tank top</li>
             <li>Light denim shorts</li>
-            <li>Twin navy ribbon streamers</li>
             <li>White knee socks · black flats</li>
             <li>Canvas: 96–128px, pending platform</li>
           </ul>
@@ -95,8 +87,7 @@
         <!-- 03 HOW SHE RUNS -->
         <section class="archive-section">
           <p class="archive-section-label">03 — How She Runs</p>
-          <h2>Reactive by Design</h2>
-          <p>Strictly reactive — the Dock icon is her only show/hide control, and she has no engagement mechanics to speak of. This is the part of the project that actually makes her an assistant rather than a desktop pet.</p>
+          <p>The Dock icon is her only show/hide control, and she  will engage if prompted through chat or by voice using an OpenRouter LLM. Still validating whether I want the widget to move around the bottom of the screen and drag&drop to move it away from screen content</p>
           <div class="archive-three-col">
             <div class="archive-step">
               <span class="archive-step-num">01</span>
@@ -111,48 +102,21 @@
             <div class="archive-step">
               <span class="archive-step-num">03</span>
               <h3>Session Memory</h3>
-              <p>Chat resumes from SQLite history, with a per-session "where I left off" summary and thread compaction for long runs.</p>
+              <p>Chat resumes from where I left off and thread compaction for long runs.</p>
             </div>
           </div>
         </section>
 
-        <!-- 04 SCOPE & RISKS -->
+        <!-- 04 GOING FORWARD -->
         <section class="archive-section">
-          <p class="archive-section-label">04 — Scope &amp; Risks</p>
-          <h2>What's Decided, What's Deferred</h2>
-          <p>The single most critical unvalidated assumption gets tested before anything else is built further. Everything here is scoped on purpose, not by accident.</p>
-          <div class="ea-log">
-            <div class="ea-log-entry">
-              <span class="ea-log-tag">Risk</span>
-              <p><strong>Always-on-top over fullscreen macOS apps</strong> is unvalidated — if it fails, the architecture needs a real rethink.</p>
-            </div>
-            <div class="ea-log-entry">
-              <span class="ea-log-tag">In</span>
-              <p><strong>Scoped in:</strong> reactive chat, task/situation organization, session memory, bilingual support, model switching with per-message cost logging.</p>
-            </div>
-            <div class="ea-log-entry">
-              <span class="ea-log-tag">Out</span>
-              <p><strong>Scoped out, for now:</strong> Claude Design, Cowork, and Code integrations, cut after early scope creep. Voice input is a possible future, not a current one.</p>
-            </div>
-            <div class="ea-log-entry">
-              <span class="ea-log-tag">Handoff</span>
-              <p><strong>Copy-context-to-clipboard</strong> for Claude Desktop — manual, deliberately, over a more complex direct integration.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- 05 WHERE IT STANDS -->
-        <section class="archive-section">
-          <p class="archive-section-label">05 — Where It Stands</p>
-          <h2>Architecture Settled, Sprite Sheet Next</h2>
-          <p>Architecture is settled on paper. The always-on-top test comes before the sprite sheet is finalized.</p>
+          <p class="archive-section-label">04 — Going Forward</p>
+          <p>The conceptual framework is established, mapping out the core user flows and interaction model. The next phase shifts from structural planning to technical execution—specifically, validating the core conversational model and building out the functional chat interface.</p>
           <div class="archive-card">
-            <h3>Status</h3>
+            <h3>What's Next</h3>
             <ul class="archive-tag-list">
-              <li>4 / 4 turnaround angles planned</li>
-              <li>1 blocking risk</li>
-              <li>96–128px candidate canvas size</li>
-              <li>Architecture stage: early</li>
+              <li>Decide on LLM to build upon</li>
+              <li>Build the reactive chat core and wire up session memory</li>
+              <li>Design chat box</li>
             </ul>
           </div>
         </section>

@@ -24,7 +24,7 @@
       <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
       <p class="archive-hero-eyebrow">Case Study 02 · In Development · iOS Mobile</p>
       <h1>MuzTime</h1>
-      <p class="archive-hero-desc">Train in rhythm — a workout interval timer that stays locked to Spotify playback. The timer pauses when the music pauses, volume ducks by interval, and the next track is chosen by where your heart rate is headed.</p>
+      <p class="archive-hero-desc">Workout in rhythm — an interval timer that stays locked to Spotify playback. The timer pauses when the music pauses, volume ducks by interval, and the next track is chosen by where your heart rate is headed.</p>
       <div class="archive-meta">
         <span class="archive-pill"><strong>Role</strong> Product Designer · Developer</span>
         <span class="archive-pill"><strong>Tools</strong> Figma · Spotify API · Python</span>
@@ -50,24 +50,16 @@
         <!-- 01 THE PROBLEM -->
         <section class="archive-section">
           <p class="archive-section-label">01 — The Problem</p>
-          <h2>Two Apps That Don't Talk</h2>
-          <p>Interval timers and music apps have never actually talked to each other — so the workout and the soundtrack fight instead of moving together.</p>
-          <div class="archive-two-col">
-            <div class="archive-card">
-              <h3>What's Broken Today</h3>
-              <p>Music keeps running through rest periods. Track intros get skipped mid-warm-up or, worse, don't. The two apps have no idea the other exists.</p>
-            </div>
-            <div class="archive-card">
-              <h3>What MuzTime Does Instead</h3>
-              <p>One integrated session — the timer and Spotify respond to each other automatically, with just enough manual control (ducking, playlist choice) to feel personal.</p>
-            </div>
+          <p>Interval timers and music apps are never actually sinked and intervals are hard to track through music.</p>
+          <div class="archive-card">
+            <h3>What Makes MuzTime Unique</h3>
+            <p>One integrated session — the timer and Spotify respond to each other automatically, with just enough manual control (ducking, playlist choice) to feel personal.</p>
           </div>
         </section>
 
         <!-- 02 CORE MECHANICS -->
         <section class="archive-section">
           <p class="archive-section-label">02 — Core Mechanics</p>
-          <h2>Three Systems in Lockstep</h2>
           <p>Three systems keep the timer and the music in lockstep, without asking the user to babysit either one.</p>
           <div class="archive-three-col">
             <div class="archive-step">
@@ -82,44 +74,53 @@
             </div>
             <div class="archive-step">
               <span class="archive-step-num">C</span>
-              <h3>Energy Queue</h3>
-              <p>A two-tier AI queue sequences tracks from your own playlist by energy arc, with Spotify Recommendations as a labeled fallback.</p>
+              <h3>Queue Management</h3>
+              <p>A AI queue sequences tracks from your own playlist by vibe and energy, with Spotify Recommendations as a labeled fallback.</p>
             </div>
           </div>
         </section>
 
-        <!-- 03 THE FLOW — 7 SCREENS -->
+        <!-- 03 THE FLOW, 7 SCREENS -->
         <section class="archive-section">
           <p class="archive-section-label">03 — The Flow, 7 Screens</p>
-          <h2>Designed at iPhone 14 Pro Dimensions</h2>
-          <p>Designed in Figma. The countdown is the centerpiece throughout — a bold digital number, not a ring, sized up from 80px on Home to 96px on Active.</p>
+          <p>All of these designs were tried through AI to get a understanding of professional/sporty design style.</p>
+          <div class="mz-claude-designs">
+            <div class="mz-claude-design-box">
+              <img src="IMG_/muztime/muz-claude-design-1.png" alt="MuzTime — Claude Design pass 1 (AI-generated exploration), full screen set" loading="lazy">
+              <span class="mz-claude-design-label">Claude Design (AI) — Pass 1</span>
+            </div>
+            <div class="mz-claude-design-box">
+              <img src="IMG_/muztime/muz-claude-design-2.png" alt="MuzTime — Claude Design pass 2 (AI-generated exploration), full screen set" loading="lazy">
+              <span class="mz-claude-design-label">Claude Design (AI) — Pass 2</span>
+            </div>
+          </div>
           <div class="mz-screens">
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">M</div></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-01-splash.png" alt="MuzTime — Splash screen" loading="lazy"></div>
               <div class="mz-phone-caption"><span class="mz-idx">01</span><span class="mz-name">Splash</span></div>
             </div>
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">S</div></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-02-spotify-connect.png" alt="MuzTime — Spotify Connect screen" loading="lazy"></div>
               <div class="mz-phone-caption"><span class="mz-idx">02</span><span class="mz-name">Spotify Connect</span></div>
             </div>
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">＋</div></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-03-home-setup.png" alt="MuzTime — Home / Setup screen" loading="lazy"></div>
               <div class="mz-phone-caption"><span class="mz-idx">03</span><span class="mz-name">Home / Setup</span></div>
             </div>
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">▶</div></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-04-active-rest.png" alt="MuzTime — Active / Rest screen" loading="lazy"></div>
               <div class="mz-phone-caption"><span class="mz-idx">04</span><span class="mz-name">Active / Rest</span></div>
             </div>
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">✓</div></div>
-              <div class="mz-phone-caption"><span class="mz-idx">05</span><span class="mz-name">Workout Complete</span></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-05-complete.png" alt="MuzTime — Workout Complete screen" loading="lazy"></div>
+              <div class="mz-phone-caption"><span class="mz-idx">05</span><span class="mz-name">Complete</span></div>
             </div>
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">≡</div></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-06-history-collapsed.png" alt="MuzTime — History — Collapsed screen" loading="lazy"></div>
               <div class="mz-phone-caption"><span class="mz-idx">06</span><span class="mz-name">History — Collapsed</span></div>
             </div>
             <div class="mz-phone">
-              <div class="mz-phone-frame"><div class="mz-glyph">⌄</div></div>
+              <div class="mz-phone-frame"><img src="IMG_/muztime/muztime-07-history-expanded.png" alt="MuzTime — History — Expanded screen" loading="lazy"></div>
               <div class="mz-phone-caption"><span class="mz-idx">07</span><span class="mz-name">History — Expanded</span></div>
             </div>
           </div>
@@ -128,43 +129,51 @@
         <!-- 04 LOCKED DECISIONS -->
         <section class="archive-section">
           <p class="archive-section-label">04 — Locked Decisions</p>
-          <h2>What Was Decided, and Why</h2>
+          <div class="mz-decisions-row">
           <div class="mz-decision-list">
             <div class="mz-decision">
               <span class="mz-decision-tag">01</span>
-              <p><strong>Digital countdown over ring timer</strong> — a large bold number reads faster mid-set than an arc does. 80px on Home, 96px on Active.</p>
+              <p><strong>Music on pace</strong> - using spotify AI, feed some playlists and ask it to recommend similar songs when the user's playlist end.</p>
             </div>
             <div class="mz-decision">
               <span class="mz-decision-tag">02</span>
-              <p><strong>Spotify Connect carries MuzTime's own accent</strong> — not Spotify green. The app needed its own identity from screen one.</p>
+              <p><strong>Connecting Spotify</strong> — The app has its own identity aside from the Spotify green. By spofity API, advertisement will play for free users - will be treated like a music and played throughout the timer.</p>
             </div>
             <div class="mz-decision">
               <span class="mz-decision-tag">03</span>
-              <p><strong>Active track lives in a bottom sheet</strong> — playlist name, Spotify deep link, and current track, without covering the countdown.</p>
+              <p><strong>No-music timer</strong> — A muted timer is included.</p>
             </div>
             <div class="mz-decision">
               <span class="mz-decision-tag">04</span>
-              <p><strong>Workout review as a one-line pill</strong> — the summary earns a glance, not a screen.</p>
+              <p><strong>Distinguishing workout/rest</strong> — start/stop with spotify, add docking to music at rest.</p>
             </div>
             <div class="mz-decision">
               <span class="mz-decision-tag">05</span>
-              <p><strong>History groups by playlist</strong> — one tappable header drills into a list; AI-recommended tracks are flagged distinctly, never blended in unlabeled.</p>
+              <p><strong>Web first</strong> — current API access focuses on web only.</p>
             </div>
+          </div>
+          <div class="mz-mood-carousel">
+            <button class="mz-mood-frame" type="button" id="mz-mood-frame-btn" aria-label="Open full-size mood board sketch">
+              <img src="IMG_/muztime/mood-idea-1.png" alt="MuzTime mood board sketch, page 1" id="mz-mood-img" loading="lazy">
+            </button>
+            <div class="mz-mood-dots" role="tablist" aria-label="Mood sketch page">
+              <button class="mz-mood-dot is-active" type="button" data-mz-mood="0" aria-label="Sketch page 1"></button>
+              <button class="mz-mood-dot" type="button" data-mz-mood="1" aria-label="Sketch page 2"></button>
+            </div>
+          </div>
           </div>
         </section>
 
         <!-- 05 WHERE IT STANDS -->
         <section class="archive-section">
-          <p class="archive-section-label">05 — Where It Stands</p>
-          <h2>Seven Screens, Backend in Progress</h2>
-          <p>Seven screens designed and decided. Backend build against the Spotify Web API is in progress — Python, learned largely on this project.</p>
+          <p class="archive-section-label">05 — Going Forward</p>
+          <p>Seven screens designed and decided through AI vibe coding. The backend build against the Spotify Web API is in progress — Python, learned largely on this project.</p>
           <div class="archive-card">
             <h3>Status</h3>
             <ul class="archive-tag-list">
-              <li>7 / 7 screens designed</li>
-              <li>3 core systems locked</li>
-              <li>2 cuts made on purpose</li>
-              <li>v0.4 current build</li>
+              <li>7 screens redesign by hand</li>
+              <li>coding the Spotify API linkage and workout timer</li>
+              <li>possible mobile adaptation</li>
             </ul>
           </div>
         </section>
@@ -178,6 +187,154 @@
     <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
   </footer>
 
+  <!-- ── LIGHTBOX MODAL ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&#x2715;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">←</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">→</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </div>
+
+  <script>
+    // ── Lightbox state (shared modal, same pattern as case_nd.html) ──
+    (function () {
+      var lightbox      = document.getElementById('lightbox');
+      var lightboxImg   = document.getElementById('lightbox-img');
+      var lightboxTitle = document.getElementById('lightbox-title');
+      var lightboxClose = document.getElementById('lightbox-close');
+      var lightboxPrev  = document.getElementById('lightbox-prev');
+      var lightboxNext  = document.getElementById('lightbox-next');
+      if (!lightbox) return;
+
+      var currentImages = [];
+      var currentIndex  = 0;
+
+      function openLightbox(images, index) {
+        currentImages = images;
+        currentIndex  = index;
+        updateLightbox();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        lightboxClose.focus();
+        var multi = images.length > 1;
+        lightboxPrev.style.display = multi ? 'flex' : 'none';
+        lightboxNext.style.display = multi ? 'flex' : 'none';
+      }
+
+      function updateLightbox() {
+        var current = currentImages[currentIndex];
+        lightboxImg.src = current.src;
+        lightboxImg.alt = current.title;
+        lightboxTitle.textContent = currentImages.length > 1
+          ? current.title + ' (' + (currentIndex + 1) + ' / ' + currentImages.length + ')'
+          : current.title;
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+        currentImages = [];
+      }
+
+      lightboxPrev.addEventListener('click', function (e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightbox();
+      });
+      lightboxNext.addEventListener('click', function (e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateLightbox();
+      });
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && currentImages.length > 1) { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
+        if (e.key === 'ArrowRight' && currentImages.length > 1) { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
+      });
+
+      window.mzOpenLightbox = openLightbox;
+    })();
+  </script>
+
+  <script>
+    // Hero countdown dial — loops a 45s "Work Interval" so the ring/number
+    // actually move instead of sitting frozen on a static mockup value.
+    (function () {
+      var dial = document.querySelector('.mz-dial');
+      var numEl = document.querySelector('.mz-dial-num');
+      if (!dial || !numEl) return;
+      var TOTAL = 45;
+      var remaining = TOTAL;
+      function tick() {
+        var deg = (remaining / TOTAL) * 300;
+        dial.style.setProperty('--mz-fill', deg + 'deg');
+        numEl.textContent = '00:' + String(remaining).padStart(2, '0');
+        remaining -= 1;
+        if (remaining < 0) remaining = TOTAL;
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+
+  <script>
+    // Mood-sketch carousel (04 — Locked Decisions) — auto-rotates between the
+    // two mood-board sketch pages, fade transition + dots, same pattern as
+    // the "01 — Why" run-through carousel on case_nd.html.
+    (function () {
+      var moodImages = [
+        { src: 'IMG_/muztime/mood-idea-1.png', alt: 'MuzTime mood board sketch, page 1', title: 'MuzTime — Mood Board, Page 1' },
+        { src: 'IMG_/muztime/mood-idea-2.png', alt: 'MuzTime mood board sketch, page 2', title: 'MuzTime — Mood Board, Page 2' }
+      ];
+      var moodImg = document.getElementById('mz-mood-img');
+      var moodFrameBtn = document.getElementById('mz-mood-frame-btn');
+      var moodDots = document.querySelectorAll('.mz-mood-dot');
+      if (!moodImg || !moodDots.length) return;
+      var moodIndex = 0;
+      var moodTimer = null;
+
+      function showMood(index) {
+        moodIndex = index;
+        var page = moodImages[index];
+        moodImg.classList.add('is-fading');
+        window.setTimeout(function () {
+          moodImg.src = page.src;
+          moodImg.alt = page.alt;
+          moodDots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === index); });
+          requestAnimationFrame(function () { moodImg.classList.remove('is-fading'); });
+        }, 220);
+      }
+
+      function startMoodCarousel() {
+        clearInterval(moodTimer);
+        moodTimer = window.setInterval(function () {
+          showMood((moodIndex + 1) % moodImages.length);
+        }, 4200);
+      }
+
+      moodDots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          showMood(parseInt(dot.dataset.mzMood, 10));
+          startMoodCarousel();
+        });
+      });
+
+      if (moodFrameBtn) {
+        moodFrameBtn.addEventListener('click', function () {
+          if (window.mzOpenLightbox) window.mzOpenLightbox(moodImages, moodIndex);
+        });
+      }
+
+      startMoodCarousel();
+    })();
+  </script>
 
   <script>
     // "Back" link reflects wherever the visitor actually came from — Projects

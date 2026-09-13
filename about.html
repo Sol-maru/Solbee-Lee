@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Solbee Lee — About</title>
-    <link rel="stylesheet" type="text/css" href="normalize_v8.0.1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -30,24 +29,78 @@
     <section class="about-grid">
 
       <div class="about-left">
-        <img class="profile-pic" src="PHOTOS/IMG_4784.jpg" alt="Profile photo of Solbee Lee" width="300" height="300">
+        <button class="about-photo-frame" type="button" id="about-photo-frame-btn" aria-label="Open full-size photo">
+          <img id="about-photo-img" src="PHOTOS/profile.png" alt="Solbee Lee, photo 1 of 4" loading="lazy">
+        </button>
+        <div class="about-photo-dots" role="tablist" aria-label="Photo">
+          <button class="about-photo-dot is-active" type="button" data-about-photo="0" aria-label="Photo 1"></button>
+          <button class="about-photo-dot" type="button" data-about-photo="1" aria-label="Photo 2"></button>
+          <button class="about-photo-dot" type="button" data-about-photo="2" aria-label="Photo 3"></button>
+          <button class="about-photo-dot" type="button" data-about-photo="3" aria-label="Photo 4"></button>
+        </div>
       </div>
 
       <div class="about-right">
         <div class="identity">
-          <h2>Solbee Lee</h2>
-          <p class="handles">
-            <a href="https://www.instagram.com/bee._.nus/?next=%2Fsol16._.rena%2F" target="_blank" rel="noopener">@bee._.nus</a> ·
-            <a href="mailto:sol16.rena@gmail.com">sol16.rena@gmail.com</a>
-          </p>
         </div>
 
         <div class="about-card" aria-labelledby="about-artist-title">
-          <h3 id="about-artist-title">About the artist</h3>
-          <p>Hello I'm Solbee!<br>I am an AI-driven web design and builder intersecting visual art, neurodevelopmental condtion, and emerging technology.</p>
+          <p>Hello I'm Solbee!<br>I am an AI-driven digital product designer and builder intersecting visual art, neurodevelopmental condtion, and emerging technology. <br> Currently studying at the Universtiy of Michigan Ann Arbor as a sophomore in UX design BSI, Art&Design BA, and an entrepreneurship minor, I design intuitive, user-centered platforms that translate complex data and generative AI into accessible realities. My focus is on engineering empathetic digital environments that meet users exactly where they are, blending rigorous system architecture with rich, expressive illustration.</p>
         </div>
       </div>
 
+    </section>
+
+    <!-- BIG CONTACT SECTION -->
+    <section class="about-contact-big">
+      <p class="about-contact-eyebrow">Get in touch</p>
+      <h2 class="about-contact-title">Contact With Me</h2>
+      <div class="about-contact-tiles">
+        <a class="about-contact-tile" href="mailto:sol16.rena@gmail.com">
+          <span class="about-contact-tile-label">Email</span>
+          <span class="about-contact-tile-value">sol16.rena@gmail.com</span>
+        </a>
+        <a class="about-contact-tile" href="https://www.linkedin.com/in/solbee-lee-053358386/" target="_blank" rel="noopener">
+          <span class="about-contact-tile-label">LinkedIn</span>
+          <span class="about-contact-tile-value">/in/solbee-lee</span>
+        </a>
+        <a class="about-contact-tile" href="https://www.instagram.com/bee._.nus/?next=%2Fsol16._.rena%2F" target="_blank" rel="noopener">
+          <span class="about-contact-tile-label">Instagram</span>
+          <span class="about-contact-tile-value">@bee._.nus</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- TOOLS CAROUSEL -->
+    <section class="about-tools">
+      <p class="about-tools-eyebrow">What I Build With</p>
+      <div class="about-tools-strip">
+        <div class="about-tools-card">
+          <span class="about-tools-idx">01</span>
+          <span class="about-tools-name">Figma</span>
+          <p>UI/UX design, prototyping, and dev handoff for every case study on this site.</p>
+        </div>
+        <div class="about-tools-card">
+          <span class="about-tools-idx">02</span>
+          <span class="about-tools-name">Adobe Illustrator</span>
+          <p>Vector illustration, branding, and event graphics.</p>
+        </div>
+        <div class="about-tools-card">
+          <span class="about-tools-idx">03</span>
+          <span class="about-tools-name">Adobe Photoshop</span>
+          <p>Photo editing and compositing for posters and social content.</p>
+        </div>
+        <div class="about-tools-card">
+          <span class="about-tools-idx">04</span>
+          <span class="about-tools-name">Claude</span>
+          <p>AI-assisted ideation, prototyping, and pair-building — including this site.</p>
+        </div>
+        <div class="about-tools-card">
+          <span class="about-tools-idx">05</span>
+          <span class="about-tools-name">Canva</span>
+          <p>Fast social and event graphics for weekly church programming.</p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -88,10 +141,10 @@
       <div class="education-skills">
         <div>
           <h3>Education</h3>
+          <p><strong>University of Michigan</strong> – UX Design BSI, Art &amp; Design BA, Entrepreneurship minor (Fall 2025)</p>
+          <p>Focus: User Experience, Interdisciplinary Design</p>
           <p><strong>Saratoga High School</strong> – Media Arts Program (2021 - 2025)</p>
           <p>Focus: Media Arts, Adobe Suites, Interdisciplinary Projects</p>
-          <p><strong>University of Michigan</strong> – Stamps School of Art &amp; Design (Fall 2025)</p>
-          <p>Focus: User Experience, Media Arts, Interdisciplinary Design</p>
         </div>
 
         <div>
@@ -113,6 +166,135 @@
   <footer class="site-footer-flat">
     <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
   </footer>
+
+  <!-- ── LIGHTBOX MODAL ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&#x2715;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">←</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">→</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </div>
+
+  <script>
+    // ── Lightbox (same shared pattern used on the case studies) ──
+    (function () {
+      var lightbox      = document.getElementById('lightbox');
+      var lightboxImg   = document.getElementById('lightbox-img');
+      var lightboxTitle = document.getElementById('lightbox-title');
+      var lightboxClose = document.getElementById('lightbox-close');
+      var lightboxPrev  = document.getElementById('lightbox-prev');
+      var lightboxNext  = document.getElementById('lightbox-next');
+      if (!lightbox) return;
+
+      var currentImages = [];
+      var currentIndex  = 0;
+
+      function openLightbox(images, index) {
+        currentImages = images;
+        currentIndex  = index;
+        updateLightbox();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        lightboxClose.focus();
+        var multi = images.length > 1;
+        lightboxPrev.style.display = multi ? 'flex' : 'none';
+        lightboxNext.style.display = multi ? 'flex' : 'none';
+      }
+
+      function updateLightbox() {
+        var current = currentImages[currentIndex];
+        lightboxImg.src = current.src;
+        lightboxImg.alt = current.title;
+        lightboxTitle.textContent = currentImages.length > 1
+          ? current.title + ' (' + (currentIndex + 1) + ' / ' + currentImages.length + ')'
+          : current.title;
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+        currentImages = [];
+      }
+
+      lightboxPrev.addEventListener('click', function (e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightbox();
+      });
+      lightboxNext.addEventListener('click', function (e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateLightbox();
+      });
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && currentImages.length > 1) { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
+        if (e.key === 'ArrowRight' && currentImages.length > 1) { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
+      });
+
+      window.aboutOpenLightbox = openLightbox;
+    })();
+  </script>
+
+  <script>
+    // ── About photo carousel — auto-rotates through Bee's photos, fade
+    // transition + dots, click opens the lightbox for a full-size view.
+    (function () {
+      var photos = [
+        { src: 'PHOTOS/profile.png',   alt: 'Solbee Lee, photo 1 of 4', title: 'Solbee Lee — Photo 1' },
+        { src: 'PHOTOS/IMG_4784.jpg',  alt: 'Solbee Lee, photo 2 of 4', title: 'Solbee Lee — Photo 2' },
+        { src: 'PHOTOS/profile2.jpeg', alt: 'Solbee Lee, photo 3 of 4', title: 'Solbee Lee — Photo 3' },
+        { src: 'PHOTOS/profile3.jpeg', alt: 'Solbee Lee, photo 4 of 4', title: 'Solbee Lee — Photo 4' }
+      ];
+      var photoImg = document.getElementById('about-photo-img');
+      var photoFrameBtn = document.getElementById('about-photo-frame-btn');
+      var photoDots = document.querySelectorAll('.about-photo-dot');
+      if (!photoImg || !photoDots.length) return;
+      var photoIndex = 0;
+      var photoTimer = null;
+
+      function showPhoto(index) {
+        photoIndex = index;
+        var page = photos[index];
+        photoImg.classList.add('is-fading');
+        window.setTimeout(function () {
+          photoImg.src = page.src;
+          photoImg.alt = page.alt;
+          photoDots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === index); });
+          requestAnimationFrame(function () { photoImg.classList.remove('is-fading'); });
+        }, 220);
+      }
+
+      function startPhotoCarousel() {
+        clearInterval(photoTimer);
+        photoTimer = window.setInterval(function () {
+          showPhoto((photoIndex + 1) % photos.length);
+        }, 4200);
+      }
+
+      photoDots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          showPhoto(parseInt(dot.dataset.aboutPhoto, 10));
+          startPhotoCarousel();
+        });
+      });
+
+      if (photoFrameBtn) {
+        photoFrameBtn.addEventListener('click', function () {
+          if (window.aboutOpenLightbox) window.aboutOpenLightbox(photos, photoIndex);
+        });
+      }
+
+      startPhotoCarousel();
+    })();
+  </script>
 
 </body>
 </html>
