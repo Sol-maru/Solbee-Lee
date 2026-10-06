@@ -13,7 +13,7 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(16, 31, 20, 0.82);
+      background: rgba(8, 10, 12, 0.85);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       align-items: center;
@@ -27,20 +27,16 @@
       height: min(920px, 96vh);
       display: flex;
       flex-direction: column;
-      background: var(--evergreen-deep);
-      border: 1px solid var(--hairline-on-dark);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+      gap: 0.6rem;
+      background: none;
     }
     .cafe-modal-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.7rem 0.9rem;
-      background: var(--evergreen);
-      border-bottom: 1px solid var(--hairline-on-dark);
+      padding: 0;
+      background: none;
       flex-wrap: wrap;
     }
     .cafe-modal-tabs { display: flex; gap: 0.4rem; }
@@ -49,8 +45,8 @@
       font-size: 0.72rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(251, 254, 249, 0.65);
-      background: none;
+      color: rgba(251, 254, 249, 0.7);
+      background: rgba(0, 0, 0, 0.35);
       border: 1px solid var(--hairline-on-dark);
       border-radius: 999px;
       padding: 0.45rem 1rem;
@@ -59,9 +55,9 @@
     }
     .cafe-modal-tab:hover { color: var(--porcelain); }
     .cafe-modal-tab.active {
-      background: var(--moss);
-      border-color: var(--moss);
-      color: var(--porcelain);
+      background: var(--porcelain);
+      border-color: var(--porcelain);
+      color: #111;
     }
     .cafe-modal-close {
       font-family: 'IBM Plex Mono', monospace;
@@ -69,7 +65,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--porcelain);
-      background: none;
+      background: rgba(0, 0, 0, 0.35);
       border: 1px solid var(--hairline-on-dark);
       border-radius: 999px;
       padding: 0.45rem 1rem;
@@ -77,7 +73,11 @@
       transition: background 0.15s ease;
     }
     .cafe-modal-close:hover { background: rgba(251, 254, 249, 0.12); }
-    .cafe-modal-body { position: relative; flex: 1; background: #0d2535; }
+    .cafe-modal-body {
+      position: relative; flex: 1; background: #0d2535;
+      border-radius: 10px; overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+    }
     .cafe-modal-body iframe {
       position: absolute;
       inset: 0;
@@ -136,6 +136,16 @@
           </div>
         </a>
 
+        <a href="still-water.html" class="card" id="card-still-water">
+          <img class="card-img" src="IMG_/still-water-thumb.jpg" alt="Still Water — a pixel-art dusk lake with a floating mirror and a blooming plum branch">
+          <div class="card-body">
+            <span class="card-tag">Interactive Experiment · Ambience</span>
+            <h2 class="card-title">Still Water</h2>
+            <p class="card-desc">A pixel-art dusk lake — a mirror that reflects nothing, a plum branch that blooms and lets go, a breathing guide, and a rain/wind/water sound mix you can tune.</p>
+            <span class="card-link">Step inside →</span>
+          </div>
+        </a>
+
         <article class="card card-coming-soon">
           <div class="card-img-placeholder">Coming soon</div>
           <div class="card-body">
@@ -185,7 +195,9 @@
       var loading  = document.getElementById('cafe-modal-loading');
       var closeBtn = document.getElementById('cafe-modal-close');
       var tabs     = modal.querySelectorAll('.cafe-modal-tab');
+      var tabsWrap = modal.querySelector('.cafe-modal-tabs');
       var CAFE_SRC = 'rainy-cafe.html';
+      var stillCard = document.getElementById('card-still-water');
 
       function setActiveTab(page) {
         tabs.forEach(function (t) {
@@ -216,13 +228,19 @@
         if (frame.src && frame.src !== 'about:blank') loading.style.display = 'none';
       });
 
-      function openModal() {
+      // The popup is shared: Rainy Cafe shows its Start/Menu/Study tabs,
+      // single-page pieces (Still Water) hide them.
+      function openModal(src, label, showTabs) {
         modal.classList.add('open');
+        modal.setAttribute('aria-label', label);
+        frame.title = label;
+        closeBtn.setAttribute('aria-label', 'Close ' + label);
+        tabsWrap.style.visibility = showTabs ? 'visible' : 'hidden';
         document.body.style.overflow = 'hidden';
         loading.style.display = 'flex';
-        setActiveTab(1);
-        // Load fresh each time the popup opens (a clean Pomodoro session).
-        frame.src = CAFE_SRC;
+        if (showTabs) setActiveTab(1);
+        // Load fresh each time the popup opens (a clean session).
+        frame.src = src;
         closeBtn.focus();
       }
 
@@ -235,7 +253,12 @@
 
       card.addEventListener('click', function (e) {
         e.preventDefault();
-        openModal();
+        openModal(CAFE_SRC, 'Rainy Cafe', true);
+      });
+
+      stillCard.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal('still-water.html', 'Still Water', false);
       });
 
       tabs.forEach(function (tab) {
