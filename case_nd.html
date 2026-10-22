@@ -24,11 +24,13 @@
       <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
       <p class="archive-hero-eyebrow">Personal / Family Project · UX/UI Design</p>
       <h1>Project ND</h1>
-      <p class="archive-hero-desc">Personal homework assistant for autistic students who get the work done but not the understanding.</p>
+      <p class="archive-hero-desc">An experimental AI-assisted learning app that helps students reason through homework instead of just finishing it, built around my younger brother's needs.</p>
       <div class="archive-meta">
         <span class="archive-pill"><strong>Role</strong> Designer · Builder</span>
-        <span class="archive-pill"><strong>Stack</strong> Claude Design</span>
-        <span class="archive-pill"><strong>Status</strong> Early Mockup</span>
+        <span class="archive-pill"><strong>Timeline</strong> Sept 24, 2026 – Present</span>
+        <span class="archive-pill"><strong>Stack</strong> Claude, Gemini</span>
+        <span class="archive-pill"><strong>Skills</strong> Interaction Design · AI-Assisted Development · Prototyping</span>
+        <span class="archive-pill"><strong>Status</strong> Paused by choice</span>
       </div>
     </div>
   </header>
@@ -38,33 +40,30 @@
     <div class="archive-container">
       <div class="archive-body">
 
-        <!-- 01 WHY I'M BUILDING THIS -->
+        <!-- 01 WHY I BUILT THIS -->
         <section class="archive-section">
-          <p class="archive-section-label">01 — Why I'm Building This</p>
+          <p class="archive-section-label">01 — Why I Built This</p>
+
+          <div class="archive-section-desc">
+            <p>ND is an experimental AI-assisted learning application designed to support qualitative reasoning, sentence formation, and independent learning for neurodivergent students. Initially I designed it as a homework assistance tool. However, the project evolved into an exploration of how structured guidance and adaptive questioning could help students develop a deeper understanding of their assignments rather than simply completing them. The application aims to break down actual homework assignments and AI-generated practice questions into manageable steps. Through simplified language, progressive hints, and strategic redirection, it encourages users to formulate their own responses and strengthen their reasoning skills.</p>
+            <p>The prototype was developed around my younger brother's specific learning needs, making the project both a personal exploration of accessible education and an exercise in designing for individual cognitive differences.</p>
+          </div>
 
           <div class="archive-two-col">
             <div class="archive-card">
-              <h3>The Problem</h3>
-              <p>When my brother struggles with homework, asking for help usually means either being handed the answer outright or engaging in a stressful nightly negotiation over parent involvement. Neither method actually teaches the material, leaving him focused on task completion for a grade rather than true comprehension, while exhausting limited parental time.</p>
+              <h3>The Challenge</h3>
+              <p>When my younger brother struggles with homework, asking for assistance often leads to one of two outcomes: receiving the answer directly or becoming dependent on prolonged guidance. Neither approach consistently supports independent understanding and future ability. Instead, homework becomes an exercise in completing assignments for a grade rather than retaining and applying the underlying concepts. This creates frustration for both the student and the parent, particularly when daily assignments require extensive one-on-one guidance. The challenge was to explore how newer technology could provide meaningful assistance without replacing the cognitive effort necessary for learning.</p>
             </div>
             <div class="archive-card">
               <h3>The Goal</h3>
-              <p>Develop an interactive web app that breaks down pasted assignments question by question. Instead of giving away the answer, the tool uses strategic redirection to build his qualitative reasoning skills—helping him actually learn the underlying concepts while drastically reducing the hours a parent must spend supervising.</p>
+              <p>Design an interactive learning tool that helps students work through assignments independently by breaking complex tasks into smaller, approachable steps. Rather than supplying answers, the application should encourage reasoning through adaptive prompts, progressive hints, and constructive redirection. The intended outcomes were to strengthen independent reasoning and sentence formation, reduce cognitive overload during homework, and lessen reliance on continuous parental supervision.</p>
             </div>
           </div>
 
-          <div class="nd-page-carousel">
-            <button class="nd-page-carousel-frame" type="button" id="nd-carousel-btn" aria-label="Open full-size screenshot">
-              <img src="IMG_/ND/nd-page1-full.jpg" alt="Page 1 of the real Claude Design mockup — pasting homework in." id="nd-carousel-img" loading="lazy">
-              <span class="nd-page-carousel-label" id="nd-carousel-label">01 · Paste It In</span>
-            </button>
-            <div class="nd-page-carousel-dots" role="tablist" aria-label="Mockup page">
-              <button class="nd-dot is-active" type="button" data-nd-page="0" aria-label="Page 1 — Paste It In"></button>
-              <button class="nd-dot" type="button" data-nd-page="1" aria-label="Page 2 — Session Recap"></button>
-              <button class="nd-dot" type="button" data-nd-page="2" aria-label="Page 3 — Live Session"></button>
-            </div>
-          </div>
-          <p class="nd-pages-strip-caption">A run-through of the real Claude Design mockup, cycling on its own — click it (or a dot) to open the full screenshot.</p>
+          <figure class="nd-motion">
+            <video id="nd-motion-video" class="nd-motion-video" src="IMG_/ND/nd-motion.mp4" poster="IMG_/ND/nd-motion-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Screen recording of the Project ND prototype in use"></video>
+            <figcaption class="nd-pages-strip-caption">A screen recording of the Project ND prototype, playing at 1.5x speed. Use the controls to pause or scrub.</figcaption>
+          </figure>
         </section>
 
         <!-- 02 HOW IT WORKS -->
@@ -127,11 +126,9 @@
               </div>
             </figure>
           </div>
-        </section>
 
-        <!-- 03 GUARDIAN VIEW -->
-        <section class="archive-section">
-          <p class="archive-section-label">03 — Guardian View</p>
+          <!-- Guardian View (inside 02) -->
+          <p class="nd-session-summary-label" style="margin-top: 2.5rem;">Guardian View · what a parent sees</p>
           <div class="nd-session-summary" aria-hidden="true">
             <p class="nd-session-summary-label">Tonight, Question by Question</p>
             <div class="nd-session-grid">
@@ -153,17 +150,83 @@
           </div>
         </section>
 
-        <!-- 04 GOING FORWARD -->
+        <!-- 03 IDEATION -->
         <section class="archive-section">
-          <p class="archive-section-label">04 — Going Forward</p>
-          <p>This prototype serves as a foundational model rather than a final solution. The next phase shifts focus from interface design to generative UX research—specifically investigating how neurodivergent students process multi-step instructions to better inform how the app paces and reframes questions.</p>
+          <p class="archive-section-label">03 — Ideation</p>
+          <div class="nd-how-steps">
+            <div class="archive-card">
+              <h3>Phase 01 — Homework Assistance</h3>
+              <p>The initial concept focused on a web application that could organize pasted assignments into individual questions, allowing students to complete their homework one task at a time.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Phase 02 — Reasoning Through Homework</h3>
+              <p>As the concept developed, I began questioning whether breaking down homework alone would meaningfully support learning. The focus shifted toward encouraging students to explain their reasoning, interpret questions, and construct their own responses. Rather than correcting mistakes by immediately revealing answers, the tool would redirect students toward the underlying concepts.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Phase 03 — Cognitive Scaffolding &amp; Language Formation</h3>
+              <p>The final direction expanded beyond homework completion to explore how adaptive scaffolding could support everyday language formulation and working memory during moments of cognitive overload. This introduced a broader design question: how might an AI-assisted learning environment provide individualized cognitive support without replacing the student's independent thought process?</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04 DESIGN & PROTOTYPING -->
+        <section class="archive-section">
+          <p class="archive-section-label">04 — Design &amp; Prototyping</p>
+          <p>I began prototyping directly through Claude, using AI-assisted development to translate early concepts into an interactive web experience. Rather than following a traditional design-to-development workflow, I used iterative prompting to explore interface structures, learning interactions, and the technical feasibility of different features.</p>
+          <div class="archive-card">
+            <h3>Design Principles</h3>
+            <ul class="archive-bullets">
+              <li><strong>Progressive disclosure:</strong> presenting one question at a time to reduce overwhelming amounts of information.</li>
+              <li><strong>Language simplification:</strong> restating complex instructions in more approachable language without changing their intended meaning.</li>
+              <li><strong>Scaffolded reasoning:</strong> providing incremental hints that encourage students to construct answers independently.</li>
+              <li><strong>Constructive redirection:</strong> guiding students to reconsider their reasoning rather than immediately identifying an answer as incorrect.</li>
+              <li><strong>Contextual learning:</strong> incorporating subject-specific materials and actual homework to make interactions relevant to the student's coursework.</li>
+            </ul>
+          </div>
+          <p class="nd-after-card">Throughout development, I experimented with incorporating materials from different school subjects to explore how the application could adapt its guidance to different learning contexts.</p>
+          <ul class="archive-bullets">
+            <li><strong>English / ELA</strong></li>
+          </ul>
+
+          <!-- TODO (Bee): the "why" and trade-off lines below are written from what the mockup shows.
+               Replace with your own reasoning where it differs. -->
+          <div class="archive-two-col">
+            <div class="archive-card">
+              <h3>Plain Language, Original Kept</h3>
+              <p>Every question appears twice: as written on the worksheet, and restated in plain words. The plain version is always shown and never costs a hint. The trade-off is that a restatement can drift from what the teacher meant, so the original wording stays on screen beside it.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Hints on Request, in Four Tiers</h3>
+              <p>Help only appears when he asks, and it escalates: where to look, narrowing it down, walking through it, then the answer with an explanation. The default is effort rather than rescue. The trade-off is that a stuck student may not ask, so even the final tier is framed as a normal place to stop.</p>
+            </div>
+            <div class="archive-card">
+              <h3>A Chat-Style Thread</h3>
+              <p>One question at a time, in a conversational thread that can respond to his actual wording. The trade-off is that chat invites open-ended back-and-forth, which is the dependency the project set out to avoid, so each reply points back to the part of the question still open.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Coverage Over Wording</h3>
+              <p>His answer is checked for whether each part of the question was addressed, not whether it matches an expected phrasing. The trade-off is that judging coverage takes real interpretation, and this is the behavior I could not properly evaluate.</p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- 05 GOING FORWARD -->
+        <section class="archive-section">
+          <p class="archive-section-label">05 — Going Forward</p>
+          <p>Working on ND helped me recognize the distinction between creating a functional AI-powered interface and designing a learning experience that genuinely supports cognitive development. Although AI-assisted development allowed me to prototype ideas beyond my current programming experience, I encountered limitations in my ability to implement, evaluate, and refine the adaptive learning behaviors I originally envisioned.</p>
+          <p>More importantly, the project raised questions about how to determine whether an AI system is actually improving comprehension rather than simply making assignments easier to complete. For these reasons, I decided to place ND on hiatus rather than continue expanding a prototype without the technical foundation or evaluation methods necessary to support its intended purpose. I hope to revisit the project as I develop stronger skills in programming, UX research, and AI interaction design, with a greater emphasis on evaluating learning outcomes through real user testing.</p>
           <div class="archive-card">
             <h3>What's Next</h3>
-            <ul class="archive-tag-list">
+            <ul class="archive-bullets">
               <li>Investigating the cognitive processing of multi-step academic tasks in neurodivergent learners.</li>
               <li>Validating whether the "hint ladder" pacing aligns with natural problem-solving behaviors.</li>
               <li>Translating research insights into dynamic question restructuring, moving beyond simply adjusting hint frequency.</li>
             </ul>
+          </div>
+          <div class="archive-card">
+            <h3>Key Takeaway</h3>
+            <p>Designing for accessibility is not simply about reducing the difficulty of a task. It is about providing the right level of support so that users can develop the confidence and ability to complete it independently.</p>
           </div>
         </section>
 
@@ -247,52 +310,17 @@
       if (e.key === 'ArrowRight' && currentImages.length > 1) { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
     });
 
-    // ── "Run through of all pages" auto-rotating carousel (01 — Why) ──
-    const ndPages = [
-      { src: 'IMG_/ND/nd-page1-full.jpg',         thumb: 'IMG_/ND/nd-page1-full.jpg',         title: 'Project ND — 01 Paste It In',   label: '01 · Paste It In' },
-      { src: 'IMG_/ND/nd-homework-breakdown.jpg', thumb: 'IMG_/ND/nd-homework-breakdown.jpg', title: 'Project ND — 02 Session Recap', label: '02 · Session Recap' },
-      { src: 'IMG_/ND/nd-page3-full.jpg',         thumb: 'IMG_/ND/nd-page3-full.jpg',         title: 'Project ND — 03 Live Session',  label: '03 · Live Session' },
-    ];
-    const ndCarouselBtn   = document.getElementById('nd-carousel-btn');
-    const ndCarouselImg   = document.getElementById('nd-carousel-img');
-    const ndCarouselLabel = document.getElementById('nd-carousel-label');
-    const ndDots          = document.querySelectorAll('.nd-dot');
-    let ndCarouselIndex = 0;
-    let ndCarouselTimer = null;
-
-    function showNdPage(index) {
-      ndCarouselIndex = index;
-      const page = ndPages[index];
-      ndCarouselImg.classList.add('is-fading');
-      window.setTimeout(() => {
-        ndCarouselImg.src = page.thumb;
-        ndCarouselImg.alt = page.title;
-        ndCarouselLabel.textContent = page.label;
-        ndDots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
-        requestAnimationFrame(() => ndCarouselImg.classList.remove('is-fading'));
-      }, 220);
-    }
-
-    function startNdCarousel() {
-      clearInterval(ndCarouselTimer);
-      ndCarouselTimer = window.setInterval(() => {
-        showNdPage((ndCarouselIndex + 1) % ndPages.length);
-      }, 4200);
-    }
-
-    if (ndCarouselBtn) {
-      ndCarouselBtn.addEventListener('click', () => {
-        openLightbox(ndPages, ndCarouselIndex);
-      });
-      ndDots.forEach((dot) => {
-        dot.addEventListener('click', (e) => {
-          e.stopPropagation();
-          showNdPage(parseInt(dot.dataset.ndPage, 10));
-          startNdCarousel();
-        });
-      });
-      startNdCarousel();
-    }
+    // ── Project ND screen recording: plays at 1.5x ──
+    (function () {
+      var v = document.getElementById('nd-motion-video');
+      if (!v) return;
+      function speed() { v.playbackRate = 1.5; }
+      speed();
+      v.addEventListener('loadedmetadata', speed);
+      v.addEventListener('play', speed);
+      // Some browsers reset the rate on loop; re-apply it.
+      v.addEventListener('seeked', speed);
+    })();
   </script>
 
   <script>
@@ -314,6 +342,17 @@
           }
         }
       } catch (e) { /* leave the default Projects link in place */ }
+    })();
+  </script>
+
+  <script>
+    // Opening a case study from a link (Projects, Archive) always starts at
+    // the top. Coming back with Back/Forward or a reload keeps the browser's
+    // remembered position, so a reader returns to where they left off.
+    (function () {
+      var nav = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      var type = nav ? nav.type : (performance.navigation && performance.navigation.type === 2 ? 'back_forward' : 'navigate');
+      if (type === 'navigate' && !location.hash) window.scrollTo(0, 0);
     })();
   </script>
 

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Solbee Lee — Vinted Redesign Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="page-case page-vinted">
+
+  <!-- NAV -->
+  <nav class="nav-topleft" aria-label="Primary">
+    <a href="index.html">Projects</a>
+    <a href="study.html">Study with Me</a>
+    <a href="about.html">About me</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="archive-hero">
+    <div class="archive-hero-text">
+      <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
+      <p class="archive-hero-eyebrow">Course Project · Heuristic Evaluation · UI/UX Redesign</p>
+      <h1>Vinted Redesign</h1>
+      <p class="archive-hero-desc">A heuristic evaluation of the Vinted app from a buyer's point of view, followed by redesign wireframes for the three problems that mattered most: finding an item, comparing options, and trusting the seller.</p>
+      <div class="archive-meta">
+        <span class="archive-pill"><strong>Role</strong> UX Researcher · Designer</span>
+        <span class="archive-pill"><strong>Timeline</strong> October, 2026</span>
+        <span class="archive-pill"><strong>Skills</strong> Heuristic Evaluation, Interaction Design, Wireframing</span>
+        <span class="archive-pill"><strong>Tools</strong> Figma, Claude Design, Pen &amp; Paper</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTAINER ── -->
+  <main class="archive-main">
+    <div class="archive-container">
+      <div class="archive-body">
+
+        <!-- 01 OVERVIEW -->
+        <section class="archive-section">
+          <p class="archive-section-label">01 — Overview</p>
+          <div class="archive-section-desc">
+            <p>Vinted is a secondhand clothing marketplace I use as both a buyer and a seller. For this project, I evaluated the app as a buyer with one concrete task: find a black zip-up hoodie for under $20 using search and category browsing. I walked through the task against Nielsen’s ten usability heuristics, documented every issue with an annotated screenshot and a recommendation, then redesigned the three problems that most affected the task.</p>
+            <p>The project started from my own frustrations as a seller, which I sketched first. The evaluation shifted the focus to the buyer’s side, where the problems were more fundamental: finding an item, comparing options, and deciding whether to trust a seller.</p>
+          </div>
+        </section>
+
+        <!-- 02 CHALLENGE & GOAL -->
+        <section class="archive-section">
+          <p class="archive-section-label">02 — Challenge &amp; Goal</p>
+          <div class="archive-two-col">
+            <div class="archive-card">
+              <h3>The Challenge</h3>
+              <p>A simple shopping goal turns into guesswork. To find a cardigan, a buyer has to know it lives under Clothing → Jumpers &amp; Sweaters → Cardigans, and search doesn’t follow the same logic as the category tree. Choosing between similar listings depends on memory or screenshots, because the app has no way to see options side by side. The information that tells you whether a seller is reliable (rating, review count, shipping history) lives on separate screens from the item, so buyers are asked to pay before they can easily judge the risk.</p>
+            </div>
+            <div class="archive-card">
+              <h3>The Goal</h3>
+              <p>Turn the evaluation into a clear story, Find → Compare → Trust, and propose a redesign for each step that reduces how much a buyer has to remember, search for, or guess. The redesigns should inform buyers without blocking them, and without unfairly penalizing new sellers.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 SKETCHES & FIRST REDESIGN -->
+        <section class="archive-section">
+          <p class="archive-section-label">03 — Sketches &amp; First Redesign</p>
+          <div class="archive-card">
+            <h3>Phase 01 — Seller-Side Sketches</h3>
+            <p>I started with problems I had run into as a seller: my own listings were hard to find, “My orders” and “Orders” blurred together, and notifications sat in an inbox I had to check just in case. I sketched a reorganized profile in my notebook and split orders into Sold and Bought.</p>
+          </div>
+          <div class="vt-figures vt-figures--pair">
+            <figure class="vt-figure">
+              <button type="button" class="vt-figure-btn" data-vt-index="0"><img src="IMG_/UIUX/vinted-mood1.jpg" alt="Hand sketch: current vs. redesigned navigation, pain points, and profile wireframe" loading="lazy"></button>
+              <figcaption>Sketch 1 · Navigation, pain points, profile</figcaption>
+            </figure>
+            <figure class="vt-figure">
+              <button type="button" class="vt-figure-btn" data-vt-index="1"><img src="IMG_/UIUX/vinted-mood2.jpg" alt="Hand sketch: inbox messages and orders split into sold and bought" loading="lazy"></button>
+              <figcaption>Sketch 2 · Inbox and orders</figcaption>
+            </figure>
+          </div>
+          <div class="archive-card">
+            <h3>Original vs. my interpretation</h3>
+            <p>I then redrew the screens I use most as gray wireframes, next to the current app, so I could see what changed: notifications move to a bell on the profile, the inbox keeps conversations only, and orders and wallet get their own entries.</p>
+          </div>
+          <div class="vt-figures vt-figures--pair">
+            <figure class="vt-figure">
+              <button type="button" class="vt-figure-btn" data-vt-index="2"><img src="IMG_/UIUX/vinted-original-app.png" alt="The current Vinted app: home, inbox notifications, order chat, wallet, profile and profile menu" loading="lazy"></button>
+              <figcaption>Original · Current Vinted app</figcaption>
+            </figure>
+            <figure class="vt-figure">
+              <button type="button" class="vt-figure-btn" data-vt-index="3"><img src="IMG_/UIUX/vinted-wf-seller.png" alt="My wireframes: search home, inbox, chat, profile, orders, wallet, pending balance, and full profile menu" loading="lazy"></button>
+              <figcaption>Mine · Foundational wireframes</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 04 HOW I EVALUATED IT -->
+        <section class="archive-section">
+          <p class="archive-section-label">04 — How I Evaluated It</p>
+          <div class="archive-card">
+            <h3>Phase 02 — Buyer-Side Heuristic Evaluation</h3>
+            <p>To ground the redesign in a method, not just my own habits, I switched to a structured heuristic evaluation of the buying flow. The seller-side redesign above came first and was not evaluated against the heuristics, so the two designs address different problems. The buyer side turned out to have the more fundamental ones.</p>
+          </div>
+          <p>The evaluation followed one realistic task from start to finish, so every issue was tied to a moment a real buyer would hit.</p>
+          <div class="archive-two-col">
+            <div class="archive-card">
+              <h3>Step 01 — Define the Task</h3>
+              <p>Find a black zip-up hoodie under $20, using both search and category browsing.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Step 02 — Walk Through It</h3>
+              <p>I completed the task in the app and checked each screen against Nielsen’s ten heuristics.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Step 03 — Document Everything</h3>
+              <p>I found 23 issues across all ten heuristics, each with an annotated screenshot and a recommendation.</p>
+            </div>
+            <div class="archive-card">
+              <h3>Step 04 — Find the Patterns</h3>
+              <p>Some problems showed up under more than one heuristic. Seller trust appeared under H1, H5 and H6, and the category–search conflict under H2 and H9. Those repeats decided which three problems to redesign.</p>
+            </div>
+          </div>
+          <!-- TODO (Bee): add 1–2 annotated screenshots from the workbook here (blur other users' names and locations first) -->
+        </section>
+
+        <!-- 05 DESIGN & PROTOTYPING -->
+        <section class="archive-section">
+          <p class="archive-section-label">05 — Design &amp; Prototyping</p>
+          <div class="archive-card">
+            <h3>Phase 03 — Find → Compare → Trust</h3>
+            <p>I narrowed 23 issues down to three that followed one another in a single purchase: finding the item, choosing between options, and trusting the seller enough to pay. This introduced a broader design question: how might a peer-to-peer marketplace give buyers enough information to decide confidently, without overwhelming them or unfairly penalizing new sellers?</p>
+          </div>
+          <p>Each fix became a three-screen wireframe flow in a consistent gray-and-teal style. I drew the Find wireframe myself. The Compare and Trust wireframes were generated with Claude Design to match that format, then checked against the issues they needed to solve.</p>
+          <div class="archive-card">
+            <h3>Design Principles</h3>
+            <ul class="archive-bullets">
+              <li><strong>Recognition rather than recall:</strong> showing listing details side by side instead of making buyers remember them across screens.</li>
+              <li><strong>Error prevention:</strong> surfacing seller reliability before payment, at the moment it matters.</li>
+              <li><strong>Match with the real world:</strong> letting buyers find items the way they think about them, not only through the app’s category structure.</li>
+              <li><strong>Inform, don’t block:</strong> giving buyers context before risky actions without stopping them from acting.</li>
+              <li><strong>Fairness:</strong> describing new sellers neutrally, so limited history isn’t treated as bad behavior.</li>
+            </ul>
+          </div>
+          <div class="vt-figures vt-figures--wide">
+            <figure class="vt-figure">
+              <button type="button" class="vt-figure-btn" data-vt-index="4"><img src="IMG_/UIUX/vinted-wf-compare.png" alt="Compare wireframes: select two listings, compare them side by side, keep the comparison reminder on the listing" loading="lazy"></button>
+              <figcaption>Compare · Select → Side by side → Back on the listing</figcaption>
+            </figure>
+            <figure class="vt-figure">
+              <button type="button" class="vt-figure-btn" data-vt-index="5"><img src="IMG_/UIUX/vinted-wf-trust.png" alt="Trust wireframes: seller reliability card for an established seller, the same card for a new seller, and a Before you pay note at checkout" loading="lazy"></button>
+              <figcaption>Trust · Established seller → New seller → Before you pay</figcaption>
+            </figure>
+          </div>
+          <!-- TODO (Bee): add your own Find wireframe board here -->
+        </section>
+
+        <!-- 06 FEEDBACK -->
+        <section class="archive-section">
+          <p class="archive-section-label">06 — Feedback</p>
+          <p>This project taught me the difference between noticing that something is frustrating and being able to explain why. Using heuristics as a framework turned my own complaints as a Vinted user into specific, documented issues, and showed me that the most useful findings were the ones that repeated across several heuristics.</p>
+          <p>It also showed me the limits of the method. A heuristic evaluation flags likely problems, but it can’t tell me which ones real shoppers actually run into or how much they matter. The Compare and Trust redesigns are proposals until they’re tested. I’d like to test them with Vinted buyers on the same hoodie task, and redraw the AI-generated wireframes by hand so every screen reflects my own design decisions.</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer-flat">
+    <p>&copy; 2026 Solbee Lee. All rights reserved.</p>
+  </footer>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&#x2715;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">←</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">→</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </div>
+
+  <script>
+    // Sketches are detailed, so each figure opens full-size in the lightbox
+    (function () {
+      var lb = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      var title = document.getElementById('lightbox-title');
+      var closeBtn = document.getElementById('lightbox-close');
+      var prev = document.getElementById('lightbox-prev');
+      var next = document.getElementById('lightbox-next');
+      var images = [
+        { src: 'IMG_/UIUX/vinted-mood1.jpg', title: 'Sketch 1 — navigation, pain points, profile' },
+        { src: 'IMG_/UIUX/vinted-mood2.jpg', title: 'Sketch 2 — inbox and orders' },
+        { src: 'IMG_/UIUX/vinted-original-app.png', title: 'Original — current Vinted app' },
+        { src: 'IMG_/UIUX/vinted-wf-seller.png', title: 'Mine — foundational wireframes' },
+        { src: 'IMG_/UIUX/vinted-wf-compare.png', title: 'Compare wireframes (example data)' },
+        { src: 'IMG_/UIUX/vinted-wf-trust.png', title: 'Trust wireframes (example data)' }
+      ];
+      var i = 0;
+      function show() {
+        img.src = images[i].src; img.alt = images[i].title;
+        title.textContent = images[i].title + ' (' + (i + 1) + ' / ' + images.length + ')';
+      }
+      function open(n) { i = n; show(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; closeBtn.focus(); }
+      function close() { lb.classList.remove('open'); document.body.style.overflow = ''; img.src = ''; }
+      function step(d) { i = (i + d + images.length) % images.length; show(); }
+      document.querySelectorAll('.vt-figure-btn').forEach(function (b) {
+        b.addEventListener('click', function () { open(Number(b.dataset.vtIndex)); });
+      });
+      prev.addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+      next.addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+      closeBtn.addEventListener('click', close);
+      lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') step(-1);
+        if (e.key === 'ArrowRight') step(1);
+      });
+    })();
+  </script>
+
+  <script>
+    // "Back" link reflects wherever the visitor actually came from: Projects
+    // (index.html) by default, or Archive when they arrived from there.
+    (function () {
+      var back = document.getElementById('case-back-link');
+      if (!back) return;
+      try {
+        if (document.referrer) {
+          var ref = new URL(document.referrer);
+          if (ref.origin === window.location.origin) {
+            var refFile = ref.pathname.split('/').pop() || 'index.html';
+            if (refFile === 'archive.html') { back.setAttribute('href', 'archive.html'); back.textContent = '← Back to Archive'; }
+          }
+        }
+      } catch (e) { /* leave the default Projects link in place */ }
+    })();
+  </script>
+
+  <script>
+    // Opening a case study from a link (Projects, Archive) always starts at
+    // the top. Coming back with Back/Forward or a reload keeps the browser's
+    // remembered position, so a reader returns to where they left off.
+    (function () {
+      var nav = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      var type = nav ? nav.type : (performance.navigation && performance.navigation.type === 2 ? 'back_forward' : 'navigate');
+      if (type === 'navigate' && !location.hash) window.scrollTo(0, 0);
+    })();
+  </script>
+
+</body>
+</html>

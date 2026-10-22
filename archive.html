@@ -42,11 +42,23 @@
         <div class="project-grid">
 
           <article class="card">
-            <img class="card-img" src="IMG_/UIUX/nd.jpg" alt="Project ND">
+            <div class="nd-thumb" role="img" aria-label="A looping mockup of the Project ND homework chat: a question in plain words, a hint, a student answer, and feedback">
+              <div class="nd-thumb-win">
+                <div class="nd-thumb-top"><span>Homework Companion</span><span class="nd-thumb-tok">12 tokens</span></div>
+                <div class="nd-thumb-body">
+                  <div class="nd-thumb-plain"><span class="nd-thumb-lab">In plain words</span>Say how much the Freedmen's Bureau schools changed who could get an education.</div>
+                  <div class="nd-thumb-thread">
+                    <div class="nd-thumb-msg nd-thumb-a nd-chat-anim-1">Start with the first part. Who could attend?</div>
+                    <div class="nd-thumb-msg nd-thumb-u nd-chat-anim-2">adults at night, kids in the day, so everyone</div>
+                    <div class="nd-thumb-msg nd-thumb-a nd-chat-anim-3">First part covered. Now, why did some people push back?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="card-body">
               <span class="card-tag">Web App · Personal Project</span>
               <h2 class="card-title">Project ND</h2>
-              <p class="card-desc">Personal homework assistant for autistic students who get the work done but not the understanding.</p>
+              <p class="card-desc">An interactive practice site that guides students through homework questions one at a time, pairing plain-language restatement and tiered hints with qualitative feedback on their reasoning, to support independent understanding over answer retrieval.</p>
               <a href="case_nd.html" class="card-link">View case study →</a>
             </div>
           </article>
@@ -55,24 +67,40 @@
             <img class="card-img" src="IMG_/UIUX/card-woobee-archive.jpg" alt="Woobee Archieve">
             <div class="card-body">
               <span class="card-tag">Portfolio Website · UX/UI Design</span>
-              <h2 class="card-title">Woobee Archieve</h2>
+              <h2 class="card-title">The Living Atlas</h2>
               <p class="card-desc">Personal portfolio built from scratch with HTML, CSS, and JavaScript.</p>
               <a href="case_archive.html" class="card-link">View case study →</a>
             </div>
           </article>
 
           <article class="card">
-            <img class="card-img" src="IMG_/UIUX/card-eunara.jpg" alt="은아라">
+            <div class="da-thumb" role="img" aria-label="비나리 floating beside the jellyfish desktop pet, which cycles through its overheating animation">
+              <img class="da-binari" src="IMG_/eunara/eunara-moving.png" alt="">
+              <img class="da-jelly" src="IMG_/eunara/web/thumb-overheat-1.png" alt="" data-frames="IMG_/eunara/web/thumb-overheat-1.png|IMG_/eunara/web/thumb-overheat-2.png|IMG_/eunara/web/thumb-overheat-3.png|IMG_/eunara/web/thumb-overheat-4.png|IMG_/eunara/web/thumb-overheat-5.png|IMG_/eunara/web/thumb-overheat-6.png|IMG_/eunara/web/thumb-overheat-7.png">
+            </div>
             <div class="card-body">
               <span class="card-tag">macOS App · Character Design</span>
-              <h2 class="card-title">은아라</h2>
-              <p class="card-desc">A pixel-art chibi desktop companion for macOS — an original character designed by Bee, built as a quiet Socratic thinking partner that turns scattered thoughts into actionable tasks.</p>
+              <h2 class="card-title">Desktop Agent</h2>
+              <p class="card-desc">A calm desktop AI assistant for macOS with two pixel-art faces — a character called 비나리 and a jellyfish pet — built to turn scattered thoughts into actionable tasks.</p>
               <a href="case_eunara.html" class="card-link">View case study →</a>
             </div>
           </article>
 
           <article class="card">
-            <img class="card-img" src="IMG_/UIUX/card-muztime.jpg" alt="MuzTime">
+            <div class="mz-thumb" role="img" aria-label="MuzTime loading: red ripples spread behind the logo while a bar fills, then the work timer starts counting down">
+              <div class="mz-splash">
+                <span class="mz-rip"></span><span class="mz-rip"></span><span class="mz-rip"></span>
+                <div class="mz-logo"><span>MUZ</span><span class="mz-logo-red">TIME</span></div>
+                <p class="mz-tag">Train hard. Stay in rhythm.</p>
+                <div class="mz-bar"><span class="mz-fill"></span></div>
+                <p class="mz-status">Connecting to Spotify…</p>
+              </div>
+              <div class="mz-timer">
+                <p class="mz-timer-label">WORK</p>
+                <p class="mz-timer-time">00:45</p>
+                <p class="mz-timer-round">Round 1 of 5</p>
+              </div>
+            </div>
             <div class="card-body">
               <span class="card-tag">Mobile App · Product Design</span>
               <h2 class="card-title">MuzTime</h2>
@@ -540,6 +568,41 @@
       ], 0);
     });
 
+  
+    // Desktop Agent thumbnail: jellyfish cycles its overheat frames.
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('.da-jelly').forEach(function (img) {
+        var frames = img.dataset.frames.split('|'), i = 0;
+        frames.forEach(function (f) { new Image().src = f; });
+        if (reduce) return;
+        setInterval(function () { i = (i + 1) % frames.length; img.src = frames[i]; }, 240);
+      });
+    })();
+  
+    // MuzTime thumbnail: loading ripples, then the work timer counts down.
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('.mz-thumb').forEach(function (el) {
+        var time = el.querySelector('.mz-timer-time');
+        if (reduce) { el.classList.add('is-static'); return; }
+        var t1, t2;
+        function pad(n) { return (n < 10 ? '0' : '') + n; }
+        function cycle() {
+          el.classList.remove('is-timer', 'is-run');
+          void el.offsetWidth;
+          el.classList.add('is-run');
+          time.textContent = '00:45';
+          t1 = setTimeout(function () {
+            el.classList.add('is-timer');
+            var s = 45;
+            t2 = setInterval(function () { s -= 1; time.textContent = '00:' + pad(s); }, 1000);
+            setTimeout(function () { clearInterval(t2); cycle(); }, 5600);
+          }, 5300);
+        }
+        cycle();
+      });
+    })();
   </script>
 
 </body>

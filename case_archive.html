@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Solbee Lee — Woobee Archive Case Study</title>
+  <title>Solbee Lee — The Living Atlas Case Study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
 </head>
@@ -23,13 +23,14 @@
     <div class="archive-hero-text">
       <a href="index.html" class="archive-hero-back" id="case-back-link">← Back to Projects</a>
       <p class="archive-hero-eyebrow">Portfolio Website · UX/UI Design</p>
-      <h1>Woobee Archive</h1>
-      <p class="archive-hero-desc">My personal portfolio site, built from scratch with HTML, CSS, and a little JavaScript through Claude. Rebuilt as of September 2026.</p>
+      <h1>The Living Atlas</h1>
+      <p class="archive-hero-desc">My personal portfolio site, and the fifth version of it, built from scratch in HTML, CSS and JavaScript with Claude.</p>
       <div class="archive-meta">
         <span class="archive-pill"><strong>Role</strong> Designer · Developer</span>
-        <span class="archive-pill"><strong>Stack</strong> HTML · CSS · JavaScript</span>
-        <span class="archive-pill"><strong>Hosted on</strong> GitHub Pages</span>
-        <span class="archive-pill"><strong>Status</strong> In Progress</span>
+        <!-- TODO (Bee): replace "Ongoing" with "[Month, Year] – Present" once you know when the first sketches were made -->
+        <span class="archive-pill"><strong>Timeline</strong> Ongoing</span>
+        <span class="archive-pill"><strong>Skills</strong> Visual Identity, Design Systems, Front-End Development, Information Architecture</span>
+        <span class="archive-pill"><strong>Tools</strong> HTML, CSS, JavaScript, Claude, Figma</span>
       </div>
     </div>
   </header>
@@ -42,72 +43,25 @@
         <!-- 01 OVERVIEW -->
         <section class="archive-section">
           <p class="archive-section-label">01 — Overview</p>
-          <h2>Why is it Woobee Archive?</h2>
           <div class="archive-section-desc">
-            <p>Woobee Archive is my personal portfolio website, a digital atelier for my art works.</p>
-            <p>I chose this portfolio to be archival to express my multidisciplinary background. While I currently focus on website building and UX/UI designs, I come from a fine arts background with some experience in media arts as well including cinematography, 3D works, and video editing. This is my third design system for this portfolio and these processes were a chance for me to research about myself and embracing the multidimensionality of a person.</p>
-          </div>
-          <div class="archive-two-col">
-            <div class="archive-card">
-              <h3>The Challenge</h3>
-              <p>The old archival design system had low hierarchy order of my projects from UX/UI case studies, fine art paintings, and a pixel-art character design all sitting under the same skeuomorphic folder icons and brass borders.</p>
-            </div>
-            <div class="archive-card">
-              <h3>The Goal</h3>
-              <p>A shift towards professional, green-based system with a mix conceptual and utilitarian design, with just enough dark-academia for a serif font highlight.</p>
-            </div>
+            <p>The Living Atlas is my personal portfolio site, and the fifth version of it. I come from fine arts, with experience in painting, media arts, cinematography, 3D and video, and I now focus on UX/UI design. Every version of this site has been an attempt to show all of that without it reading as scattered. I built it from scratch in HTML, CSS and JavaScript with Claude, rebuilding it each time I learned more about what a portfolio needs to do.</p>
+            <p>The name describes where the site is heading. An atlas holds many different territories in one book, the way my work spans research, interfaces and art. “Living” means it keeps adapting, the way I want my designs to adapt to different minds and contexts.</p>
           </div>
         </section>
 
-        <!-- 02 DESIGN DECISIONS -->
+        <!-- 02 LEARNING ABOUT MYSELF -->
         <section class="archive-section">
-          <p class="archive-section-label">02 — Design Decisions</p>
-          <p>The new palette is two anchors —  </p>
-          <div class="archive-three-col">
-            <div class="archive-step">
-              <span class="archive-step-num">01</span>
-              <h3>A no-box navigation</h3>
-              <p>The primary nav is fixed top-right with <code>mix-blend-mode: difference</code>, so one plain-text nav auto-inverts and stays legible over both the dark hero and the porcelain content below — no boxes, no pills, no borders.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">02</span>
-              <h3>Shared CSS architecture</h3>
-              <p>One <code>main.css</code> file holds the design tokens and every page's styles, scoped by a body class per page (<code>page-home</code>, <code>page-about</code>, <code>page-archive</code>, <code>page-woobee</code>) so each page can be migrated onto the new theme independently.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">03</span>
-              <h3>Hairlines, not borders</h3>
-              <p>Dashed brass borders and card shadows were replaced with single 1px breaklines.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">04</span>
-              <h3>New palette</h3>
-              <p>Porcelain (#FBFEF9) as the paper/surface and evergreen (#19381F) as the near-black ground — with moss.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">05</span>
-              <h3>New font types</h3>
-              <p>Serif type (Stardos Stencil, then Noto Serif KR for Hangul glyphs like 은아라) for my name and project titles while everything else runs on Inter for body copy and IBM Plex Mono for labels, tags, and index numbers.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">06</span>
-              <h3>The Hero</h3>
-              <p>The homepage hero is full-viewport and stays pinned in place. Translucent green-grey blobs that drift and merge, one trailing the cursor — the current version.</p>
-            </div>
-            <div class="archive-step">
-              <span class="archive-step-num">07</span>
-              <h3>Projects</h3>
-              <p>Below the hero, the homepage lists my UX/UI case studies with the mini tag now shown directly under each title, not just on hover. Hovering or focusing a row pops up a preview panel on the right with that project's tag, title, and description — completely hidden by default, scaled and sized to actually use the space the narrower list column leaves open.</p>
-            </div>
-          </div>
+          <p class="archive-section-label">02 — Learning About Myself</p>
+          <p>My earlier portfolios gave everything the same weight. UX case studies, fine art paintings and a pixel-art character all sat under the same skeuomorphic folder icons and brass borders, so a reviewer couldn’t tell what my main work was. When I fixed that with a clean, systematic green theme, I ran into the opposite problem: the site became so geometric and minimal that it felt generic, closer to an AI template than to me.</p>
+          <p>Build a portfolio that is organized enough for a reviewer to skim in under a minute, but personal enough that it couldn’t belong to anyone else. The structure should stay precise and modern; the feeling should be natural, fluid and calm, without tipping into something antique.</p>
         </section>
 
-        <!-- 03 PROCESS -->
+        <!-- 03 IDEATION -->
         <section class="archive-section">
-          <p class="archive-section-label">03 — Process</p>
-          <p>This is my third iterated portfolio since I learned how to code. Before I ever touched this codebase, there was a round of paper wireframing, then a fully built site called Moribee Studio, then a second site called Studio Woobee (later renamed Woobee Archieve). Each one got rebuilt from the ground up as I learned more about what a portfolio actually needs to do. Below are real screenshots pulled straight from that history.</p>
+          <p class="archive-section-label">03 — Ideation</p>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 1 — Early sketches</h3>
+            <h3 class="archive-stage-title">Phase 01 — Paper Sketches</h3>
+            <p>Before writing any code, I sketched what sections a portfolio even needed: a homepage, an About page, and a portfolio page organized into folders.</p>
             <div class="archive-photo-row">
               <img src="IMG_/archive-history/s1-sketch-home.jpg" alt="Early pencil wireframe — Woobee Studio homepage with folder navigation">
               <img src="IMG_/archive-history/s1-sketch-about.jpg" alt="Early pencil wireframe — About Me page layout">
@@ -115,7 +69,8 @@
             </div>
           </div>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 2 — First portfolio: Moribee Studio</h3>
+            <h3 class="archive-stage-title">Phase 02 — Moribee Studio</h3>
+            <p>My first built site, with a hand-painted koi fish hero. It was the first time I shipped a real multi-page site, but each page was built separately, with no shared system.</p>
             <div class="archive-photo-row">
               <img src="IMG_/archive-history/s2-moribee-home.jpg" alt="Moribee Studio homepage with a painted koi fish hero image">
               <img src="IMG_/archive-history/s2-moribee-portfolio.jpg" alt="Moribee Studio Fine Arts portfolio grid">
@@ -123,7 +78,8 @@
             </div>
           </div>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 3 — Second portfolio: Studio Woobee</h3>
+            <h3 class="archive-stage-title">Phase 03 — Studio Woobee → Woobee Archive</h3>
+            <p>A stronger identity: one hero, one palette, one mascot, and folder-icon navigation over a rainy pond illustration. It looked charming, but the folder icons weren’t self-explanatory, and every kind of work still had equal weight.</p>
             <div class="archive-photo-row">
               <img src="IMG_/archive-history/s3-woobee-home1.jpg" alt="Studio Woobee homepage with folder navigation and a rainy pond illustration">
               <img src="IMG_/archive-history/s2-current-about.jpg" alt="This site's current About Me page">
@@ -131,29 +87,49 @@
             </div>
           </div>
           <div class="archive-stage">
-            <h3 class="archive-stage-title">Stage 4 — Current design</h3>
+            <h3 class="archive-stage-title">Phase 04 — The Green System</h3>
+            <p>A full rebuild around a professional, component-based system: porcelain and evergreen as two anchor colors, serif type reserved for names and titles, mono labels, thin hairlines instead of borders, and one shared stylesheet for every page. It fixed the hierarchy, but the landing page started to feel too geometric and impersonal.</p>
             <div class="archive-photo-row">
               <img src="IMG_/archive-history/s4-current-index.jpg" alt="Current Projects page hero">
               <img src="IMG_/archive-history/s4-current-project.jpg" alt="Current Projects page case-study list">
               <img src="IMG_/archive-history/s4-current-archive.jpg" alt="Current Archive page">
             </div>
           </div>
+          <div class="archive-stage">
+            <h3 class="archive-stage-title">Phase 05 — Finding the Living Atlas</h3>
+            <p>To find what was missing, I started from words instead of visuals. I listed what I see in myself and my work: books, knowledge, botanical forms, neurodivergence, psychological development, context, simplicity, learning, process and water, especially water’s flexibility and adaptability. Using AI as a sparring partner, I worked those words into three ideas:</p>
+            <ul class="archive-bullets">
+              <li><strong>Roots — understanding:</strong> looking past behavior to the context it comes from.</li>
+              <li><strong>Water — adaptation:</strong> no single right way to think, and design that bends to different minds.</li>
+              <li><strong>Growth — development:</strong> valuing the process of learning and iterating over a perfect result.</li>
+            </ul>
+            <p class="la-after-list">The first direction that came out of this leaned into a vintage botanical journal, and I rejected it as too antique. I wanted the intelligence of academia, not its old paper. That narrowed the direction to modern organic academia: a precise, modern system with a quiet natural, fluid layer inside it. This introduced a broader design question:</p>
+            <p class="la-question">How can a portfolio feel natural and personal while staying as clear and skimmable as a system?</p>
+          </div>
         </section>
 
-        <!-- 06 REFLECTION -->
+        <!-- 04 DESIGN & PROTOTYPING -->
         <section class="archive-section">
-          <p class="archive-section-label">06 — Reflection</p>
-          <h2>Looking Back at the Growth</h2>
-          <p>Seeing all three portfolios side by side is honestly the most useful part of this page for me. The paper wireframes were me figuring out what sections even belong on a portfolio. Moribee Studio was the first time I shipped a real, multi-page site — but it was built page by page, with very little thought given to a consistent system. Studio Woobee was a step forward in identity (one hero, one palette, one mascot), but the structure underneath was still mostly guesswork.</p>
-          <div class="archive-two-col">
-            <div class="archive-card">
-              <h3>Growth as a designer</h3>
-              <p>The clearest change across the three versions is restraint. The earlier sites reached for a mascot, a hand-painted hero, a folder-icon metaphor — charming, but doing a lot of the visual work instead of the layout. This version leans on fewer, more deliberate choices: one accent color per case study, a consistent type scale, and a hero built to hold up across the whole redesign rather than being redrawn every time the mood changed.</p>
-            </div>
-            <div class="archive-card">
-              <h3>Learning UX/UI basics</h3>
-              <p>Building three portfolios back to back is where a lot of the fundamentals actually clicked — information hierarchy, why a nav shouldn't compete with the content it's pointing to, what "consistent spacing" means once you're maintaining more than one page at a time. Studio Woobee's folder-icon navigation looked cute but wasn't self-explanatory; this version's more literal nav labels are a direct result of that lesson.</p>
-            </div>
+          <p class="archive-section-label">04 — Design &amp; Prototyping</p>
+          <p>I designed the site directly in code with Claude, iterating on live pages instead of static mockups. That let me test real behavior like scrolling, hovering and pinning, but it also meant every change was visible immediately, including the ones that didn’t work.</p>
+          <div class="archive-card">
+            <h3>Design Principles</h3>
+            <ul class="archive-bullets">
+              <li><strong>Rooted in understanding, fluid in approach:</strong> a strict structure underneath, with organic movement only where it adds meaning.</li>
+              <li><strong>Mostly system, a little nature:</strong> the grid, type and labels do most of the work; fluid, organic elements are an accent, not the style.</li>
+              <li><strong>Color is quiet, composition is bold:</strong> evergreen as the identity, porcelain as breathing space, and one accent, so the work carries the visual weight.</li>
+              <li><strong>Exposed structure:</strong> numbered sections, mono labels and hairlines make the organization visible, like a spec sheet.</li>
+              <li><strong>One system, many personalities:</strong> every case study shares the same tokens and layout, and differs only in its own hero moment.</li>
+            </ul>
+          </div>
+          <div class="archive-card">
+            <h3>Design Decisions</h3>
+            <ul class="archive-bullets">
+              <li><strong>A transparent nav that became a solid bar.</strong> The nav first floated over the page with no background and inverted its color to stay readable. Content scrolled underneath it and collided with the links. Trade-off: a solid bar takes a strip of every screen, but it never competes with the content.</li>
+              <li><strong>One accent color, not one per project.</strong> I tried giving each case study its own accent and removed it, because the pages started to feel like separate sites. Trade-off: less variety, but the portfolio reads as one body of work.</li>
+              <li><strong>Modern, not antique.</strong> I kept porcelain, evergreen and the spec-sheet structure, and cut anything that read as aged: yellowed paper, brass, gothic type, sepia tones. Trade-off: less instant “dark academia” mood, but the site looks current.</li>
+              <li><strong>Three hero experiments, and why they’re not enough.</strong> The landing went from a cursor spotlight, to pond ripples, to drifting blobs that merge as you move. Each was better than the last, but all three are abstract shapes, and drifting blobs are now a common look on AI-generated sites. The next hero is my own: a top-down teacup overflowing, leaves floating on the surface, and the spilled tea spreading across the page, with the cursor leaving a trail like the wake behind a boat.</li>
+            </ul>
           </div>
         </section>
 
@@ -186,6 +162,17 @@
           }
         }
       } catch (e) { /* leave the default Projects link in place */ }
+    })();
+  </script>
+
+  <script>
+    // Opening a case study from a link (Projects, Archive) always starts at
+    // the top. Coming back with Back/Forward or a reload keeps the browser's
+    // remembered position, so a reader returns to where they left off.
+    (function () {
+      var nav = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || null;
+      var type = nav ? nav.type : (performance.navigation && performance.navigation.type === 2 ? 'back_forward' : 'navigate');
+      if (type === 'navigate' && !location.hash) window.scrollTo(0, 0);
     })();
   </script>
 
